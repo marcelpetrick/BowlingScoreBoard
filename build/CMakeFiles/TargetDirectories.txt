@@ -1,0 +1,3 @@
+C:/Users/mpetrick/Desktop/MarcelsDocuments/CodeSchnipsel/BowlingScoreBoard/build/CMakeFiles/BowlingScoreBoard.dir
+C:/Users/mpetrick/Desktop/MarcelsDocuments/CodeSchnipsel/BowlingScoreBoard/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/mpetrick/Desktop/MarcelsDocuments/CodeSchnipsel/BowlingScoreBoard/build/CMakeFiles/ZERO_CHECK.dir
