@@ -1,3 +1,16 @@
+//!----------------------------------------------------------------------------------
+//! Part of the project "BowlingScoreBoard"
+//!
+//! @author mail@marcelpetrick.it
+//! @date   20180903
+//!
+//! Coding challenge with C++/Qt.
+//! Create a score-board which computes the score and displays it to the player.
+//!
+//! @class  BSB_MainWindow
+//! @brief  todo
+//!----------------------------------------------------------------------------------
+
 #include "BSB_MainWindow.h"
 #include "ui_BSB_MainWindow.h"
 

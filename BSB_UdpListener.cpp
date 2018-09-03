@@ -1,5 +1,17 @@
-#include "BSB_UdpListener.h"
+//!----------------------------------------------------------------------------------
+//! Part of the project "BowlingScoreBoard"
+//!
+//! @author mail@marcelpetrick.it
+//! @date   20180903
+//!
+//! Coding challenge with C++/Qt.
+//! Create a score-board which computes the score and displays it to the player.
+//!
+//! @class  BSB_UdpListener
+//! @brief  todo
+//!----------------------------------------------------------------------------------
 
+#include "BSB_UdpListener.h"
 
 // Qt includes
 //#include <QtCore/QDebug> //todoM remove: just for debugging

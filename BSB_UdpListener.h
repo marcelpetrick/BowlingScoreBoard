@@ -1,3 +1,16 @@
+//!----------------------------------------------------------------------------------
+//! Part of the project "BowlingScoreBoard"
+//!
+//! @author mail@marcelpetrick.it
+//! @date   20180903
+//!
+//! Coding challenge with C++/Qt.
+//! Create a score-board which computes the score and displays it to the player.
+//!
+//! @class  BSB_UdpListener
+//! @brief  todo
+//!----------------------------------------------------------------------------------
+
 #pragma once
 
 // own includes
@@ -25,7 +38,7 @@ private slots:
     void onIncomingData();
 
 private:
-    //!
+    //! todo
     std::unique_ptr<QUdpSocket> m_udpSocket;
 
 };

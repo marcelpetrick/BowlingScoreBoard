@@ -1,19 +1,24 @@
+//!----------------------------------------------------------------------------------
+//! Part of the project "BowlingScoreBoard"
+//!
+//! @author mail@marcelpetrick.it
+//! @date   20180903
+//!
+//! Coding challenge with C++/Qt.
+//! Create a score-board which computes the score and displays it to the player.
+//!
+//! @class  BSB_MainWindow
+//! @brief  todo
+//!----------------------------------------------------------------------------------
 
 // own includes
 #include "BSB_MainWindow.h"
-
 
 #include <QApplication>
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-
-    // todo make unique; position somehwere else
-    //! todo currently a leak until "end of program"
-    //BSB_UdpListener* m_udpListener = new BSB_UdpListener("192.168.1.1", 6543, nullptr);
-    //BSB_UdpListener* m_udpListener = new BSB_UdpListener("localhost", 6543, nullptr);
-
 
     BSB_MainWindow w;
     w.show();
