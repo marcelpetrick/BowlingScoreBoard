@@ -1,1 +1,11 @@
 /build-BowlingScoreBoard-Desktop-Debug/
+/debug/
+/release/
+/CMakeCache.txt
+/CMakeLists.txt.user
+/Makefile
+/Makefile.Debug
+/Makefile.Release
+/ui_BSB_GameStepWidget.h
+/ui_BSB_MainWindow.h
+*.pro.user
