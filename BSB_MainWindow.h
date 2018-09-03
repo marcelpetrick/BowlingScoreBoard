@@ -23,6 +23,6 @@ public slots:
 private:
     Ui::BSB_MainWindow *ui;
 
-    BSB_UdpListener* m_udpListener;
+    BSB_UdpListener* m_udpListener = nullptr;
 };
 
