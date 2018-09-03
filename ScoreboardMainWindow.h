@@ -5,6 +5,7 @@
 
 namespace Ui {
 class ScoreboardMainWindow;
+class GameStepWidget; // element for the "turns"
 }
 
 class ScoreboardMainWindow : public QMainWindow
