@@ -1,9 +1,9 @@
 #-----------------------------------------------------------------
-# description: CMakeLists.txt for the BownlingScoreBoard-project.
+# description: CMakeLists.txt for the BowlingScoreBoard-project.
 # author: mail@marcelpetrick.it
 #-----------------------------------------------------------------
 
-# maybe set to 3.1.0
+# maybe set to 3.10.0
 cmake_minimum_required(VERSION 3.10.0)
 project(BowlingScoreBoard)
 
@@ -23,9 +23,12 @@ set(BowlingScoreBoard_SOURCES
 	BSB_MainWindow.h
 	BSB_MainWindow.cpp
 	BSB_MainWindow.ui
+	BSB_UdpListener.h
+	BSB_UdpListener.cpp
 	BSB_GameStepWidget.ui
 )
 
-# maybe add WIN32
+# maybe add WIN32 before the source-var
 add_executable(BowlingScoreBoard ${BowlingScoreBoard_SOURCES})
 target_link_libraries (BowlingScoreBoard Qt5::Widgets)
+
