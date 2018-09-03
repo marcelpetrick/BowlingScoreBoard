@@ -10,7 +10,7 @@ Microsoft (R)-Buildmodul, Version 12.0.40629.0
 [Microsoft .NET Framework, Version 4.0.30319.42000]
 Copyright (C) Microsoft Corporation. Alle Rechte vorbehalten.
 
-Der Buildvorgang wurde am 03.09.2018 14:41:16 gestartet.
+Der Buildvorgang wurde am 03.09.2018 15:01:45 gestartet.
 Projekt "C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\3.10.0\CompilerIdC\CompilerIdC.vcxproj" auf Knoten "1" (Standardziele).
 PrepareForBuild:
   Das Verzeichnis "Debug\" wird erstellt.
@@ -36,7 +36,7 @@ Der Buildvorgang wurde erfolgreich ausgef�hrt.
     0 Warnung(en)
     0 Fehler
 
-Verstrichene Zeit 00:00:00.61
+Verstrichene Zeit 00:00:00.46
 
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
@@ -56,7 +56,7 @@ Microsoft (R)-Buildmodul, Version 12.0.40629.0
 [Microsoft .NET Framework, Version 4.0.30319.42000]
 Copyright (C) Microsoft Corporation. Alle Rechte vorbehalten.
 
-Der Buildvorgang wurde am 03.09.2018 14:41:17 gestartet.
+Der Buildvorgang wurde am 03.09.2018 15:01:46 gestartet.
 Projekt "C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\3.10.0\CompilerIdCXX\CompilerIdCXX.vcxproj" auf Knoten "1" (Standardziele).
 PrepareForBuild:
   Das Verzeichnis "Debug\" wird erstellt.
@@ -82,7 +82,7 @@ Der Buildvorgang wurde erfolgreich ausgef�hrt.
     0 Warnung(en)
     0 Fehler
 
-Verstrichene Zeit 00:00:00.51
+Verstrichene Zeit 00:00:00.47
 
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -94,151 +94,112 @@ The CXX compiler identification is MSVC, found in "C:/Users/mpetrick/Desktop/Mar
 Determining if the C compiler works passed with the following output:
 Change Dir: C:/Users/mpetrick/Desktop/MarcelsDocuments/CodeSchnipsel/BowlingScoreBoard/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/Program Files (x86)/MSBuild/12.0/bin/MSBuild.exe" "cmTC_833b3.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=12.0"
+Run Build Command:"C:/Program Files (x86)/MSBuild/12.0/bin/MSBuild.exe" "cmTC_9e619.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=12.0"
 Microsoft (R)-Buildmodul, Version 12.0.40629.0
 [Microsoft .NET Framework, Version 4.0.30319.42000]
 Copyright (C) Microsoft Corporation. Alle Rechte vorbehalten.
 
-Der Buildvorgang wurde am 03.09.2018 14:41:18 gestartet.
-Projekt "C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\CMakeTmp\cmTC_833b3.vcxproj" auf Knoten "1" (Standardziele).
+Der Buildvorgang wurde am 03.09.2018 15:01:46 gestartet.
+Projekt "C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\CMakeTmp\cmTC_9e619.vcxproj" auf Knoten "1" (Standardziele).
 PrepareForBuild:
-  Das Verzeichnis "cmTC_833b3.dir\Debug\" wird erstellt.
+  Das Verzeichnis "cmTC_9e619.dir\Debug\" wird erstellt.
   Das Verzeichnis "C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\CMakeTmp\Debug\" wird erstellt.
-  Das Verzeichnis "cmTC_833b3.dir\Debug\cmTC_833b3.tlog\" wird erstellt.
+  Das Verzeichnis "cmTC_9e619.dir\Debug\cmTC_9e619.tlog\" wird erstellt.
 InitializeBuildStatus:
-  "cmTC_833b3.dir\Debug\cmTC_833b3.tlog\unsuccessfulbuild" wird erstellt, da "AlwaysCreate" angegeben wurde.
+  "cmTC_9e619.dir\Debug\cmTC_9e619.tlog\unsuccessfulbuild" wird erstellt, da "AlwaysCreate" angegeben wurde.
 ClCompile:
-  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Fo"cmTC_833b3.dir\Debug\\" /Fd"cmTC_833b3.dir\Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:queue C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\CMakeTmp\testCCompiler.c
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Fo"cmTC_9e619.dir\Debug\\" /Fd"cmTC_9e619.dir\Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:queue C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\CMakeTmp\testCCompiler.c
   Microsoft (R) C/C++ Optimizing Compiler Version 18.00.40629 for x86
   Copyright (C) Microsoft Corporation.  All rights reserved.
   
-  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Fo"cmTC_833b3.dir\Debug\\" /Fd"cmTC_833b3.dir\Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:queue C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\CMakeTmp\testCCompiler.c
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Fo"cmTC_9e619.dir\Debug\\" /Fd"cmTC_9e619.dir\Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:queue C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\CMakeTmp\testCCompiler.c
   
   testCCompiler.c
 Link:
-  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\CMakeTmp\Debug\cmTC_833b3.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files (x86)\Visual Leak Detector\lib\Win32" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/mpetrick/Desktop/MarcelsDocuments/CodeSchnipsel/BowlingScoreBoard/build/CMakeFiles/CMakeTmp/Debug/cmTC_833b3.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/mpetrick/Desktop/MarcelsDocuments/CodeSchnipsel/BowlingScoreBoard/build/CMakeFiles/CMakeTmp/Debug/cmTC_833b3.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_833b3.dir\Debug\testCCompiler.obj
-  cmTC_833b3.vcxproj -> C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\CMakeTmp\Debug\cmTC_833b3.exe
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\CMakeTmp\Debug\cmTC_9e619.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files (x86)\Visual Leak Detector\lib\Win32" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/mpetrick/Desktop/MarcelsDocuments/CodeSchnipsel/BowlingScoreBoard/build/CMakeFiles/CMakeTmp/Debug/cmTC_9e619.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/mpetrick/Desktop/MarcelsDocuments/CodeSchnipsel/BowlingScoreBoard/build/CMakeFiles/CMakeTmp/Debug/cmTC_9e619.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_9e619.dir\Debug\testCCompiler.obj
+  cmTC_9e619.vcxproj -> C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\CMakeTmp\Debug\cmTC_9e619.exe
 FinalizeBuildStatus:
-  Die Datei "cmTC_833b3.dir\Debug\cmTC_833b3.tlog\unsuccessfulbuild" wird gel”scht.
-  Aktualisieren des Timestamps von "cmTC_833b3.dir\Debug\cmTC_833b3.tlog\cmTC_833b3.lastbuildstate".
-Die Erstellung von Projekt "C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\CMakeTmp\cmTC_833b3.vcxproj" ist abgeschlossen (Standardziele).
+  Die Datei "cmTC_9e619.dir\Debug\cmTC_9e619.tlog\unsuccessfulbuild" wird gel”scht.
+  Aktualisieren des Timestamps von "cmTC_9e619.dir\Debug\cmTC_9e619.tlog\cmTC_9e619.lastbuildstate".
+Die Erstellung von Projekt "C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\CMakeTmp\cmTC_9e619.vcxproj" ist abgeschlossen (Standardziele).
 
 Der Buildvorgang wurde erfolgreich ausgefhrt.
     0 Warnung(en)
     0 Fehler
 
-Verstrichene Zeit 00:00:00.80
+Verstrichene Zeit 00:00:00.79
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: C:/Users/mpetrick/Desktop/MarcelsDocuments/CodeSchnipsel/BowlingScoreBoard/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/Program Files (x86)/MSBuild/12.0/bin/MSBuild.exe" "cmTC_eb6ab.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=12.0"
+Run Build Command:"C:/Program Files (x86)/MSBuild/12.0/bin/MSBuild.exe" "cmTC_e648d.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=12.0"
 Microsoft (R)-Buildmodul, Version 12.0.40629.0
 [Microsoft .NET Framework, Version 4.0.30319.42000]
 Copyright (C) Microsoft Corporation. Alle Rechte vorbehalten.
 
-Der Buildvorgang wurde am 03.09.2018 14:41:19 gestartet.
-Projekt "C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\CMakeTmp\cmTC_eb6ab.vcxproj" auf Knoten "1" (Standardziele).
+Der Buildvorgang wurde am 03.09.2018 15:01:47 gestartet.
+Projekt "C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\CMakeTmp\cmTC_e648d.vcxproj" auf Knoten "1" (Standardziele).
 PrepareForBuild:
-  Das Verzeichnis "cmTC_eb6ab.dir\Debug\" wird erstellt.
+  Das Verzeichnis "cmTC_e648d.dir\Debug\" wird erstellt.
   Das Verzeichnis "C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\CMakeTmp\Debug\" wird erstellt.
-  Das Verzeichnis "cmTC_eb6ab.dir\Debug\cmTC_eb6ab.tlog\" wird erstellt.
+  Das Verzeichnis "cmTC_e648d.dir\Debug\cmTC_e648d.tlog\" wird erstellt.
 InitializeBuildStatus:
-  "cmTC_eb6ab.dir\Debug\cmTC_eb6ab.tlog\unsuccessfulbuild" wird erstellt, da "AlwaysCreate" angegeben wurde.
+  "cmTC_e648d.dir\Debug\cmTC_e648d.tlog\unsuccessfulbuild" wird erstellt, da "AlwaysCreate" angegeben wurde.
 ClCompile:
-  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Fo"cmTC_eb6ab.dir\Debug\\" /Fd"cmTC_eb6ab.dir\Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCCompilerABI.c"
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Fo"cmTC_e648d.dir\Debug\\" /Fd"cmTC_e648d.dir\Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCCompilerABI.c"
   Microsoft (R) C/C++ Optimizing Compiler Version 18.00.40629 for x86
   Copyright (C) Microsoft Corporation.  All rights reserved.
   
-  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Fo"cmTC_eb6ab.dir\Debug\\" /Fd"cmTC_eb6ab.dir\Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCCompilerABI.c"
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Fo"cmTC_e648d.dir\Debug\\" /Fd"cmTC_e648d.dir\Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCCompilerABI.c"
   
   CMakeCCompilerABI.c
 Link:
-  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\CMakeTmp\Debug\cmTC_eb6ab.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files (x86)\Visual Leak Detector\lib\Win32" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/mpetrick/Desktop/MarcelsDocuments/CodeSchnipsel/BowlingScoreBoard/build/CMakeFiles/CMakeTmp/Debug/cmTC_eb6ab.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/mpetrick/Desktop/MarcelsDocuments/CodeSchnipsel/BowlingScoreBoard/build/CMakeFiles/CMakeTmp/Debug/cmTC_eb6ab.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_eb6ab.dir\Debug\CMakeCCompilerABI.obj
-  cmTC_eb6ab.vcxproj -> C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\CMakeTmp\Debug\cmTC_eb6ab.exe
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\CMakeTmp\Debug\cmTC_e648d.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files (x86)\Visual Leak Detector\lib\Win32" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/mpetrick/Desktop/MarcelsDocuments/CodeSchnipsel/BowlingScoreBoard/build/CMakeFiles/CMakeTmp/Debug/cmTC_e648d.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/mpetrick/Desktop/MarcelsDocuments/CodeSchnipsel/BowlingScoreBoard/build/CMakeFiles/CMakeTmp/Debug/cmTC_e648d.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_e648d.dir\Debug\CMakeCCompilerABI.obj
+  cmTC_e648d.vcxproj -> C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\CMakeTmp\Debug\cmTC_e648d.exe
 FinalizeBuildStatus:
-  Die Datei "cmTC_eb6ab.dir\Debug\cmTC_eb6ab.tlog\unsuccessfulbuild" wird gel”scht.
-  Aktualisieren des Timestamps von "cmTC_eb6ab.dir\Debug\cmTC_eb6ab.tlog\cmTC_eb6ab.lastbuildstate".
-Die Erstellung von Projekt "C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\CMakeTmp\cmTC_eb6ab.vcxproj" ist abgeschlossen (Standardziele).
+  Die Datei "cmTC_e648d.dir\Debug\cmTC_e648d.tlog\unsuccessfulbuild" wird gel”scht.
+  Aktualisieren des Timestamps von "cmTC_e648d.dir\Debug\cmTC_e648d.tlog\cmTC_e648d.lastbuildstate".
+Die Erstellung von Projekt "C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\CMakeTmp\cmTC_e648d.vcxproj" ist abgeschlossen (Standardziele).
 
 Der Buildvorgang wurde erfolgreich ausgefhrt.
     0 Warnung(en)
     0 Fehler
 
-Verstrichene Zeit 00:00:00.56
+Verstrichene Zeit 00:00:00.51
 
 
 Determining if the CXX compiler works passed with the following output:
 Change Dir: C:/Users/mpetrick/Desktop/MarcelsDocuments/CodeSchnipsel/BowlingScoreBoard/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/Program Files (x86)/MSBuild/12.0/bin/MSBuild.exe" "cmTC_bb939.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=12.0"
+Run Build Command:"C:/Program Files (x86)/MSBuild/12.0/bin/MSBuild.exe" "cmTC_3de3c.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=12.0"
 Microsoft (R)-Buildmodul, Version 12.0.40629.0
 [Microsoft .NET Framework, Version 4.0.30319.42000]
 Copyright (C) Microsoft Corporation. Alle Rechte vorbehalten.
 
-Der Buildvorgang wurde am 03.09.2018 14:41:20 gestartet.
-Projekt "C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\CMakeTmp\cmTC_bb939.vcxproj" auf Knoten "1" (Standardziele).
+Der Buildvorgang wurde am 03.09.2018 15:01:48 gestartet.
+Projekt "C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\CMakeTmp\cmTC_3de3c.vcxproj" auf Knoten "1" (Standardziele).
 PrepareForBuild:
-  Das Verzeichnis "cmTC_bb939.dir\Debug\" wird erstellt.
+  Das Verzeichnis "cmTC_3de3c.dir\Debug\" wird erstellt.
   Das Verzeichnis "C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\CMakeTmp\Debug\" wird erstellt.
-  Das Verzeichnis "cmTC_bb939.dir\Debug\cmTC_bb939.tlog\" wird erstellt.
+  Das Verzeichnis "cmTC_3de3c.dir\Debug\cmTC_3de3c.tlog\" wird erstellt.
 InitializeBuildStatus:
-  "cmTC_bb939.dir\Debug\cmTC_bb939.tlog\unsuccessfulbuild" wird erstellt, da "AlwaysCreate" angegeben wurde.
+  "cmTC_3de3c.dir\Debug\cmTC_3de3c.tlog\unsuccessfulbuild" wird erstellt, da "AlwaysCreate" angegeben wurde.
 ClCompile:
-  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /GR /Fo"cmTC_bb939.dir\Debug\\" /Fd"cmTC_bb939.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\CMakeTmp\testCXXCompiler.cxx
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /GR /Fo"cmTC_3de3c.dir\Debug\\" /Fd"cmTC_3de3c.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\CMakeTmp\testCXXCompiler.cxx
   Microsoft (R) C/C++ Optimizing Compiler Version 18.00.40629 for x86
   Copyright (C) Microsoft Corporation.  All rights reserved.
   
-  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /GR /Fo"cmTC_bb939.dir\Debug\\" /Fd"cmTC_bb939.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\CMakeTmp\testCXXCompiler.cxx
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /GR /Fo"cmTC_3de3c.dir\Debug\\" /Fd"cmTC_3de3c.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\CMakeTmp\testCXXCompiler.cxx
   
   testCXXCompiler.cxx
 Link:
-  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\CMakeTmp\Debug\cmTC_bb939.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files (x86)\Visual Leak Detector\lib\Win32" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/mpetrick/Desktop/MarcelsDocuments/CodeSchnipsel/BowlingScoreBoard/build/CMakeFiles/CMakeTmp/Debug/cmTC_bb939.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/mpetrick/Desktop/MarcelsDocuments/CodeSchnipsel/BowlingScoreBoard/build/CMakeFiles/CMakeTmp/Debug/cmTC_bb939.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_bb939.dir\Debug\testCXXCompiler.obj
-  cmTC_bb939.vcxproj -> C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\CMakeTmp\Debug\cmTC_bb939.exe
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\CMakeTmp\Debug\cmTC_3de3c.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files (x86)\Visual Leak Detector\lib\Win32" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/mpetrick/Desktop/MarcelsDocuments/CodeSchnipsel/BowlingScoreBoard/build/CMakeFiles/CMakeTmp/Debug/cmTC_3de3c.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/mpetrick/Desktop/MarcelsDocuments/CodeSchnipsel/BowlingScoreBoard/build/CMakeFiles/CMakeTmp/Debug/cmTC_3de3c.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_3de3c.dir\Debug\testCXXCompiler.obj
+  cmTC_3de3c.vcxproj -> C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\CMakeTmp\Debug\cmTC_3de3c.exe
 FinalizeBuildStatus:
-  Die Datei "cmTC_bb939.dir\Debug\cmTC_bb939.tlog\unsuccessfulbuild" wird gel”scht.
-  Aktualisieren des Timestamps von "cmTC_bb939.dir\Debug\cmTC_bb939.tlog\cmTC_bb939.lastbuildstate".
-Die Erstellung von Projekt "C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\CMakeTmp\cmTC_bb939.vcxproj" ist abgeschlossen (Standardziele).
-
-Der Buildvorgang wurde erfolgreich ausgefhrt.
-    0 Warnung(en)
-    0 Fehler
-
-Verstrichene Zeit 00:00:00.52
-
-
-Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: C:/Users/mpetrick/Desktop/MarcelsDocuments/CodeSchnipsel/BowlingScoreBoard/build/CMakeFiles/CMakeTmp
-
-Run Build Command:"C:/Program Files (x86)/MSBuild/12.0/bin/MSBuild.exe" "cmTC_ecf08.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=12.0"
-Microsoft (R)-Buildmodul, Version 12.0.40629.0
-[Microsoft .NET Framework, Version 4.0.30319.42000]
-Copyright (C) Microsoft Corporation. Alle Rechte vorbehalten.
-
-Der Buildvorgang wurde am 03.09.2018 14:41:20 gestartet.
-Projekt "C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\CMakeTmp\cmTC_ecf08.vcxproj" auf Knoten "1" (Standardziele).
-PrepareForBuild:
-  Das Verzeichnis "cmTC_ecf08.dir\Debug\" wird erstellt.
-  Das Verzeichnis "C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\CMakeTmp\Debug\" wird erstellt.
-  Das Verzeichnis "cmTC_ecf08.dir\Debug\cmTC_ecf08.tlog\" wird erstellt.
-InitializeBuildStatus:
-  "cmTC_ecf08.dir\Debug\cmTC_ecf08.tlog\unsuccessfulbuild" wird erstellt, da "AlwaysCreate" angegeben wurde.
-ClCompile:
-  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /GR /Fo"cmTC_ecf08.dir\Debug\\" /Fd"cmTC_ecf08.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCXXCompilerABI.cpp"
-  Microsoft (R) C/C++ Optimizing Compiler Version 18.00.40629 for x86
-  Copyright (C) Microsoft Corporation.  All rights reserved.
-  
-  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /GR /Fo"cmTC_ecf08.dir\Debug\\" /Fd"cmTC_ecf08.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCXXCompilerABI.cpp"
-  
-  CMakeCXXCompilerABI.cpp
-Link:
-  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\CMakeTmp\Debug\cmTC_ecf08.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files (x86)\Visual Leak Detector\lib\Win32" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/mpetrick/Desktop/MarcelsDocuments/CodeSchnipsel/BowlingScoreBoard/build/CMakeFiles/CMakeTmp/Debug/cmTC_ecf08.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/mpetrick/Desktop/MarcelsDocuments/CodeSchnipsel/BowlingScoreBoard/build/CMakeFiles/CMakeTmp/Debug/cmTC_ecf08.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_ecf08.dir\Debug\CMakeCXXCompilerABI.obj
-  cmTC_ecf08.vcxproj -> C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\CMakeTmp\Debug\cmTC_ecf08.exe
-FinalizeBuildStatus:
-  Die Datei "cmTC_ecf08.dir\Debug\cmTC_ecf08.tlog\unsuccessfulbuild" wird gel”scht.
-  Aktualisieren des Timestamps von "cmTC_ecf08.dir\Debug\cmTC_ecf08.tlog\cmTC_ecf08.lastbuildstate".
-Die Erstellung von Projekt "C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\CMakeTmp\cmTC_ecf08.vcxproj" ist abgeschlossen (Standardziele).
+  Die Datei "cmTC_3de3c.dir\Debug\cmTC_3de3c.tlog\unsuccessfulbuild" wird gel”scht.
+  Aktualisieren des Timestamps von "cmTC_3de3c.dir\Debug\cmTC_3de3c.tlog\cmTC_3de3c.lastbuildstate".
+Die Erstellung von Projekt "C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\CMakeTmp\cmTC_3de3c.vcxproj" ist abgeschlossen (Standardziele).
 
 Der Buildvorgang wurde erfolgreich ausgefhrt.
     0 Warnung(en)
@@ -247,45 +208,84 @@ Der Buildvorgang wurde erfolgreich ausgefhrt.
 Verstrichene Zeit 00:00:00.53
 
 
-
-
-Detecting CXX [] compiler features compiled with the following output:
+Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: C:/Users/mpetrick/Desktop/MarcelsDocuments/CodeSchnipsel/BowlingScoreBoard/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/Program Files (x86)/MSBuild/12.0/bin/MSBuild.exe" "cmTC_14ac2.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=12.0"
+Run Build Command:"C:/Program Files (x86)/MSBuild/12.0/bin/MSBuild.exe" "cmTC_2451e.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=12.0"
 Microsoft (R)-Buildmodul, Version 12.0.40629.0
 [Microsoft .NET Framework, Version 4.0.30319.42000]
 Copyright (C) Microsoft Corporation. Alle Rechte vorbehalten.
 
-Der Buildvorgang wurde am 03.09.2018 14:41:21 gestartet.
-Projekt "C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\CMakeTmp\cmTC_14ac2.vcxproj" auf Knoten "1" (Standardziele).
+Der Buildvorgang wurde am 03.09.2018 15:01:49 gestartet.
+Projekt "C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\CMakeTmp\cmTC_2451e.vcxproj" auf Knoten "1" (Standardziele).
 PrepareForBuild:
-  Das Verzeichnis "cmTC_14ac2.dir\Debug\" wird erstellt.
+  Das Verzeichnis "cmTC_2451e.dir\Debug\" wird erstellt.
   Das Verzeichnis "C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\CMakeTmp\Debug\" wird erstellt.
-  Das Verzeichnis "cmTC_14ac2.dir\Debug\cmTC_14ac2.tlog\" wird erstellt.
+  Das Verzeichnis "cmTC_2451e.dir\Debug\cmTC_2451e.tlog\" wird erstellt.
 InitializeBuildStatus:
-  "cmTC_14ac2.dir\Debug\cmTC_14ac2.tlog\unsuccessfulbuild" wird erstellt, da "AlwaysCreate" angegeben wurde.
+  "cmTC_2451e.dir\Debug\cmTC_2451e.tlog\unsuccessfulbuild" wird erstellt, da "AlwaysCreate" angegeben wurde.
 ClCompile:
-  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /GR /Fo"cmTC_14ac2.dir\Debug\\" /Fd"cmTC_14ac2.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\feature_tests.cxx
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /GR /Fo"cmTC_2451e.dir\Debug\\" /Fd"cmTC_2451e.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCXXCompilerABI.cpp"
   Microsoft (R) C/C++ Optimizing Compiler Version 18.00.40629 for x86
   Copyright (C) Microsoft Corporation.  All rights reserved.
   
-  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /GR /Fo"cmTC_14ac2.dir\Debug\\" /Fd"cmTC_14ac2.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\feature_tests.cxx
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /GR /Fo"cmTC_2451e.dir\Debug\\" /Fd"cmTC_2451e.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCXXCompilerABI.cpp"
   
-  feature_tests.cxx
+  CMakeCXXCompilerABI.cpp
 Link:
-  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\CMakeTmp\Debug\cmTC_14ac2.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files (x86)\Visual Leak Detector\lib\Win32" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/mpetrick/Desktop/MarcelsDocuments/CodeSchnipsel/BowlingScoreBoard/build/CMakeFiles/CMakeTmp/Debug/cmTC_14ac2.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/mpetrick/Desktop/MarcelsDocuments/CodeSchnipsel/BowlingScoreBoard/build/CMakeFiles/CMakeTmp/Debug/cmTC_14ac2.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_14ac2.dir\Debug\feature_tests.obj
-  cmTC_14ac2.vcxproj -> C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\CMakeTmp\Debug\cmTC_14ac2.exe
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\CMakeTmp\Debug\cmTC_2451e.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files (x86)\Visual Leak Detector\lib\Win32" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/mpetrick/Desktop/MarcelsDocuments/CodeSchnipsel/BowlingScoreBoard/build/CMakeFiles/CMakeTmp/Debug/cmTC_2451e.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/mpetrick/Desktop/MarcelsDocuments/CodeSchnipsel/BowlingScoreBoard/build/CMakeFiles/CMakeTmp/Debug/cmTC_2451e.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_2451e.dir\Debug\CMakeCXXCompilerABI.obj
+  cmTC_2451e.vcxproj -> C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\CMakeTmp\Debug\cmTC_2451e.exe
 FinalizeBuildStatus:
-  Die Datei "cmTC_14ac2.dir\Debug\cmTC_14ac2.tlog\unsuccessfulbuild" wird gel”scht.
-  Aktualisieren des Timestamps von "cmTC_14ac2.dir\Debug\cmTC_14ac2.tlog\cmTC_14ac2.lastbuildstate".
-Die Erstellung von Projekt "C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\CMakeTmp\cmTC_14ac2.vcxproj" ist abgeschlossen (Standardziele).
+  Die Datei "cmTC_2451e.dir\Debug\cmTC_2451e.tlog\unsuccessfulbuild" wird gel”scht.
+  Aktualisieren des Timestamps von "cmTC_2451e.dir\Debug\cmTC_2451e.tlog\cmTC_2451e.lastbuildstate".
+Die Erstellung von Projekt "C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\CMakeTmp\cmTC_2451e.vcxproj" ist abgeschlossen (Standardziele).
 
 Der Buildvorgang wurde erfolgreich ausgefhrt.
     0 Warnung(en)
     0 Fehler
 
 Verstrichene Zeit 00:00:00.52
+
+
+
+
+Detecting CXX [] compiler features compiled with the following output:
+Change Dir: C:/Users/mpetrick/Desktop/MarcelsDocuments/CodeSchnipsel/BowlingScoreBoard/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Program Files (x86)/MSBuild/12.0/bin/MSBuild.exe" "cmTC_08226.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=12.0"
+Microsoft (R)-Buildmodul, Version 12.0.40629.0
+[Microsoft .NET Framework, Version 4.0.30319.42000]
+Copyright (C) Microsoft Corporation. Alle Rechte vorbehalten.
+
+Der Buildvorgang wurde am 03.09.2018 15:01:49 gestartet.
+Projekt "C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\CMakeTmp\cmTC_08226.vcxproj" auf Knoten "1" (Standardziele).
+PrepareForBuild:
+  Das Verzeichnis "cmTC_08226.dir\Debug\" wird erstellt.
+  Das Verzeichnis "C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\CMakeTmp\Debug\" wird erstellt.
+  Das Verzeichnis "cmTC_08226.dir\Debug\cmTC_08226.tlog\" wird erstellt.
+InitializeBuildStatus:
+  "cmTC_08226.dir\Debug\cmTC_08226.tlog\unsuccessfulbuild" wird erstellt, da "AlwaysCreate" angegeben wurde.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /GR /Fo"cmTC_08226.dir\Debug\\" /Fd"cmTC_08226.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\feature_tests.cxx
+  Microsoft (R) C/C++ Optimizing Compiler Version 18.00.40629 for x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /GR /Fo"cmTC_08226.dir\Debug\\" /Fd"cmTC_08226.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\feature_tests.cxx
+  
+  feature_tests.cxx
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\CMakeTmp\Debug\cmTC_08226.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files (x86)\Visual Leak Detector\lib\Win32" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/mpetrick/Desktop/MarcelsDocuments/CodeSchnipsel/BowlingScoreBoard/build/CMakeFiles/CMakeTmp/Debug/cmTC_08226.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/mpetrick/Desktop/MarcelsDocuments/CodeSchnipsel/BowlingScoreBoard/build/CMakeFiles/CMakeTmp/Debug/cmTC_08226.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_08226.dir\Debug\feature_tests.obj
+  cmTC_08226.vcxproj -> C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\CMakeTmp\Debug\cmTC_08226.exe
+FinalizeBuildStatus:
+  Die Datei "cmTC_08226.dir\Debug\cmTC_08226.tlog\unsuccessfulbuild" wird gel”scht.
+  Aktualisieren des Timestamps von "cmTC_08226.dir\Debug\cmTC_08226.tlog\cmTC_08226.lastbuildstate".
+Die Erstellung von Projekt "C:\Users\mpetrick\Desktop\MarcelsDocuments\CodeSchnipsel\BowlingScoreBoard\build\CMakeFiles\CMakeTmp\cmTC_08226.vcxproj" ist abgeschlossen (Standardziele).
+
+Der Buildvorgang wurde erfolgreich ausgefhrt.
+    0 Warnung(en)
+    0 Fehler
+
+Verstrichene Zeit 00:00:00.51
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers

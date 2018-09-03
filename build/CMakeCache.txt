@@ -14,6 +14,9 @@
 # EXTERNAL cache entries
 ########################
 
+//Dependencies for the target
+BSB_MainWindow_LIB_DEPENDS:STATIC=general;Qt5::Widgets;
+
 //Value Computed by CMake
 BowlingScoreBoard_BINARY_DIR:STATIC=C:/Users/mpetrick/Desktop/MarcelsDocuments/CodeSchnipsel/BowlingScoreBoard/build
 
@@ -165,11 +168,14 @@ CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
-//Build using Qt5 libs
-QT5BUILD:BOOL=ON
-
 //The directory containing a CMake configuration file for Qt5Core.
 Qt5Core_DIR:PATH=C:/Qt/Qt5.5.1/5.5/msvc2013_64/lib/cmake/Qt5Core
+
+//The directory containing a CMake configuration file for Qt5Gui.
+Qt5Gui_DIR:PATH=C:/Qt/Qt5.5.1/5.5/msvc2013_64/lib/cmake/Qt5Gui
+
+//The directory containing a CMake configuration file for Qt5Widgets.
+Qt5Widgets_DIR:PATH=C:/Qt/Qt5.5.1/5.5/msvc2013_64/lib/cmake/Qt5Widgets
 
 
 ########################
