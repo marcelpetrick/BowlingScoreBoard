@@ -1,21 +1,23 @@
 #-----------------------------------------------------------------
-# Project converted from qmake file using q2c
-# https://github.com/benapetr/q2c at Mo Sep 3 14:33:16 2018
+# description: CMakeLists.txt for the BownlingScoreBoard-project.
+# author: mail@marcelpetrick.it
 #-----------------------------------------------------------------
-cmake_minimum_required (VERSION 2.6)
+
+cmake_minimum_required(VERSION 3.10.0)
 project(BowlingScoreBoard)
-option(QT5BUILD "Build using Qt5 libs" TRUE)
-IF (QT5BUILD)
-    find_package(Qt5Core REQUIRED)
-    set(QT_INCLUDES ${Qt5Core_INCLUDE_DIRS})
-    include_directories(${QT_INCLUDES})
-    QT5_WRAP_CPP(BowlingScoreBoard_HEADERS_MOC ${HuggleLite_HEADERS})
-ELSE()
-    find_package(Qt4 REQUIRED)
-ENDIF()
-set(BowlingScoreBoard_SOURCES "")
-set(BowlingScoreBoard_HEADERS "")
+
+find_package(Qt5Core REQUIRED)
+find_package(Qt5Widgets REQUIRED)
+
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTOUIC ON)
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
+
+add_library(BSB_MainWindow BSB_MainWindow.cpp)
+target_link_libraries (BSB_MainWindow Qt5::Widgets)
+
+set(BowlingScoreBoard_SOURCES "main.cpp BSB_MainWindow.h") 
+set(BowlingScoreBoard_HEADERS "BSB_MainWindow.h")
+
 add_executable(BowlingScoreBoard ${BowlingScoreBoard_SOURCES} ${BowlingScoreBoard_HEADERS})
-IF (QT5BUILD)
-    qt5_use_modules(BowlingScoreBoard Core)
-ENDIF()
+target_link_libraries (BowlingScoreBoard BSB_MainWindow)
