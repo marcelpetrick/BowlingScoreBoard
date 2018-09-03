@@ -19,10 +19,12 @@ CONFIG += c++11
 
 SOURCES += \
     main.cpp \
-    BSB_MainWindow.cpp
+    BSB_MainWindow.cpp \
+    BSB_UdpListener.cpp
 
 HEADERS += \
-    BSB_MainWindow.h
+    BSB_MainWindow.h \
+    BSB_UdpListener.h
 
 FORMS += \
     BSB_MainWindow.ui \
