@@ -1,9 +1,9 @@
-#include "ScoreboardMainWindow.h"
-#include "ui_scoreboardmainwindow.h"
+#include "BSB_MainWindow.h"
+#include "ui_BSB_MainWindow.h"
 
-ScoreboardMainWindow::ScoreboardMainWindow(QWidget *parent) :
+BSB_MainWindow::BSB_MainWindow(QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui::ScoreboardMainWindow)
+    ui(new Ui::BSB_MainWindow)
 {
     ui->setupUi(this);
 
@@ -12,7 +12,7 @@ ScoreboardMainWindow::ScoreboardMainWindow(QWidget *parent) :
     //ui->verticalLayout_f1->addItem(step);
 }
 
-ScoreboardMainWindow::~ScoreboardMainWindow()
+BSB_MainWindow::~BSB_MainWindow()
 {
     delete ui;
 }

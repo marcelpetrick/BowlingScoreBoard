@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>ScoreboardMainWindow</class>
- <widget class="QMainWindow" name="ScoreboardMainWindow">
+ <class>BSB_MainWindow</class>
+ <widget class="QMainWindow" name="BSB_MainWindow">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>ScoreboardMainWindow</string>
+   <string>BowlingScoreBoard</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QWidget" name="horizontalLayoutWidget">
@@ -59,8 +59,7 @@
      </item>
      <item>
       <layout class="QVBoxLayout" name="verticalLayout_total"/>
-     </item>	 
-	 
+     </item>
     </layout>
    </widget>
   </widget>

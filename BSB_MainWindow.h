@@ -1,23 +1,21 @@
-#ifndef SCOREBOARDMAINWINDOW_H
-#define SCOREBOARDMAINWINDOW_H
+#pragma once
 
 #include <QMainWindow>
 
 namespace Ui {
-class ScoreboardMainWindow;
-class GameStepWidget; // element for the "turns"
+class BSB_MainWindow;
+class BSB_GameStepWidget; // element for the "turns"
 }
 
-class ScoreboardMainWindow : public QMainWindow
+class BSB_MainWindow : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    explicit ScoreboardMainWindow(QWidget *parent = nullptr);
-    ~ScoreboardMainWindow();
+    explicit BSB_MainWindow(QWidget *parent = nullptr);
+    ~BSB_MainWindow();
 
 private:
-    Ui::ScoreboardMainWindow *ui;
+    Ui::BSB_MainWindow *ui;
 };
 
-#endif // SCOREBOARDMAINWINDOW_H
