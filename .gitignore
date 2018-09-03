@@ -9,3 +9,13 @@
 /ui_BSB_GameStepWidget.h
 /ui_BSB_MainWindow.h
 *.pro.user
+/BSB_MainWindow.o
+/BSB_UdpListener.o
+/main.o
+/moc_BSB_MainWindow.cpp
+/moc_BSB_MainWindow.o
+/moc_BSB_UdpListener.cpp
+/moc_BSB_UdpListener.o
+/moc_predefs.h
+/.qmake.stash
+/BowlingScoreBoard
