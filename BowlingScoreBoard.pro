@@ -10,7 +10,8 @@
 QT += \
     core \
     gui \
-    widgets
+    widgets \
+    network
 
 TARGET = BowlingScoreBoard
 TEMPLATE = app
