@@ -1,8 +1,16 @@
+#----------------------------------------------------------------------------------
+# pro file for the application "BowlingScoreBoard"
+#
+# description:  Coding challenge with C++/Qt.
+#               Create a score-board which computes the score and displays it to the player.
+# author: mail@marcelpetrick.it
+# date: 20180903
+#----------------------------------------------------------------------------------
 
 QT += \
-	core \
-	gui \
-	widgets
+    core \
+    gui \
+    widgets
 
 TARGET = BowlingScoreBoard
 TEMPLATE = app
@@ -10,13 +18,12 @@ TEMPLATE = app
 CONFIG += c++11
 
 SOURCES += \
-	main.cpp \
-	ScoreboardMainWindow.cpp
+    main.cpp \
+    BSB_MainWindow.cpp
 
 HEADERS += \
-	ScoreboardMainWindow.h
+    BSB_MainWindow.h
 
 FORMS += \
-	ScoreBoardMainWindow.ui \
-	GameStepWidget.ui
-
+    BSB_MainWindow.ui \
+    BSB_GameStepWidget.ui
