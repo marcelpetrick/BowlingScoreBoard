@@ -7,6 +7,16 @@ BSB_MainWindow::BSB_MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    if (m_udpListener != nullptr)
+    {
+        delete m_udpListener;
+        m_udpListener = nullptr;
+    }
+
+    // try to create an working udp-listener
+    BSB_UdpListener* m_udpListener = new BSB_UdpListener("localhost", 6543, nullptr);
+    connect(m_udpListener, &BSB_UdpListener::signalIncomingCall, this, &BSB_MainWindow::slotFake);
+
     // testwise create some items and add them to the widget
     //GameStepWidget* step = new GameStepWidget();
     //ui->verticalLayout_f1->addItem(step);
@@ -15,4 +25,9 @@ BSB_MainWindow::BSB_MainWindow(QWidget *parent) :
 BSB_MainWindow::~BSB_MainWindow()
 {
     delete ui;
+}
+
+void BSB_MainWindow::slotFake(const QString message)
+{
+    qDebug() << "BSB_MainWindow::slotFake: " << message;
 }

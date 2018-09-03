@@ -1,5 +1,7 @@
 #pragma once
 
+#include "BSB_UdpListener.h" // just for testing
+
 #include <QMainWindow>
 
 namespace Ui {
@@ -15,7 +17,12 @@ public:
     explicit BSB_MainWindow(QWidget *parent = nullptr);
     ~BSB_MainWindow();
 
+public slots:
+    void slotFake(QString const message);
+
 private:
     Ui::BSB_MainWindow *ui;
+
+    BSB_UdpListener* m_udpListener;
 };
 
