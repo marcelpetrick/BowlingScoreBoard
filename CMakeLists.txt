@@ -3,21 +3,29 @@
 # author: mail@marcelpetrick.it
 #-----------------------------------------------------------------
 
+# maybe set to 3.1.0
 cmake_minimum_required(VERSION 3.10.0)
 project(BowlingScoreBoard)
 
+find_package(Qt5Widgets CONFIG REQUIRED)
 find_package(Qt5Core REQUIRED)
-find_package(Qt5Widgets REQUIRED)
 
+# Instruct CMake to run moc automatically when needed
 set(CMAKE_AUTOMOC ON)
+# Create code from a list of Qt designer ui files
 set(CMAKE_AUTOUIC ON)
+# Find includes in corresponding build directories
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
-add_library(BSB_MainWindow BSB_MainWindow.cpp)
-target_link_libraries (BSB_MainWindow Qt5::Widgets)
+# put all sources into one variable
+set(BowlingScoreBoard_SOURCES
+	main.cpp
+	BSB_MainWindow.h
+	BSB_MainWindow.cpp
+	BSB_MainWindow.ui
+	BSB_GameStepWidget.ui
+)
 
-set(BowlingScoreBoard_SOURCES "main.cpp BSB_MainWindow.h") 
-set(BowlingScoreBoard_HEADERS "BSB_MainWindow.h")
-
-add_executable(BowlingScoreBoard ${BowlingScoreBoard_SOURCES} ${BowlingScoreBoard_HEADERS})
-target_link_libraries (BowlingScoreBoard BSB_MainWindow)
+# maybe add WIN32
+add_executable(BowlingScoreBoard ${BowlingScoreBoard_SOURCES})
+target_link_libraries (BowlingScoreBoard Qt5::Widgets)
