@@ -4,11 +4,12 @@
 #-----------------------------------------------------------------
 
 # maybe set to 3.10.0
-cmake_minimum_required(VERSION 3.10.0)
+#cmake_minimum_required(VERSION 3.8.0)
 project(BowlingScoreBoard)
 
 find_package(Qt5Widgets CONFIG REQUIRED)
 find_package(Qt5Core REQUIRED)
+find_package(Qt5Network REQUIRED)
 
 # Instruct CMake to run moc automatically when needed
 set(CMAKE_AUTOMOC ON)
@@ -16,6 +17,10 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
 # Find includes in corresponding build directories
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
+
+# C++11 support - else we run into issues with the non-static nullptr-assignment
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # put all sources into one variable
 set(BowlingScoreBoard_SOURCES
