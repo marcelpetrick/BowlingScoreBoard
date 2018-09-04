@@ -4,7 +4,7 @@
 //! @author mail@marcelpetrick.it
 //! @date   20180903
 //!
-//! Coding challenge with C++/Qt.
+//! Coding challenge with C++/Qt/Cmake.
 //! Create a score-board which computes the score and displays it to the player.
 //!
 //! @class  BSB_UdpListener
@@ -18,6 +18,7 @@
 //#include <QtCore/QDateTime> //todoM remove: just for debugging
 //qDebug() << QDateTime::currentDateTime().toString("mm:ss:z") << "nonsense"; // todoM remove
 
+//----------------------------------------------------------------------------------
 
 BSB_UdpListener::BSB_UdpListener(const QString receiverInterface, quint32 receiverPort, QObject *parent)
     : QObject (parent)
@@ -40,6 +41,8 @@ BSB_UdpListener::BSB_UdpListener(const QString receiverInterface, quint32 receiv
     connect(m_udpSocket.get(), &QUdpSocket::readyRead, this, &BSB_UdpListener::onIncomingData);
 }
 
+//----------------------------------------------------------------------------------
+
 void BSB_UdpListener::onIncomingData()
 {
     qDebug() << "BSB_UdpListener::onIncomingData()";
@@ -50,10 +53,9 @@ void BSB_UdpListener::onIncomingData()
         QByteArray datagram;
         datagram.resize(m_udpSocket->pendingDatagramSize());
 
-        // prepare containers for additional informations; not sure if really needed
+        // prepare containers for additional information
         QHostAddress sender;
         quint16 senderPort;
-
         m_udpSocket->readDatagram(datagram.data(), datagram.size(), &sender, &senderPort);
         QString const inputMessage(QString::fromLatin1(datagram));
 
@@ -71,3 +73,5 @@ void BSB_UdpListener::onIncomingData()
         }
     }
 }
+
+//----------------------------------------------------------------------------------

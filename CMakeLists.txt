@@ -3,7 +3,7 @@
 # author: mail@marcelpetrick.it
 #-----------------------------------------------------------------
 
-# maybe set to 3.10.0
+# maybe set to 3.10.0; 3.8 is because of C++11
 #cmake_minimum_required(VERSION 3.8.0)
 project(BowlingScoreBoard)
 
@@ -28,9 +28,11 @@ set(BowlingScoreBoard_SOURCES
 	BSB_MainWindow.h
 	BSB_MainWindow.cpp
 	BSB_MainWindow.ui
+	BSB_GameStepWidget.ui
 	BSB_UdpListener.h
 	BSB_UdpListener.cpp
-	BSB_GameStepWidget.ui
+	BSB_Controller.h
+	BSB_Controller.cpp
 )
 
 # maybe add WIN32 before the source-var

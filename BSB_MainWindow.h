@@ -4,7 +4,7 @@
 //! @author mail@marcelpetrick.it
 //! @date   20180903
 //!
-//! Coding challenge with C++/Qt.
+//! Coding challenge with C++/Qt/Cmake.
 //! Create a score-board which computes the score and displays it to the player.
 //!
 //! @class  BSB_MainWindow
