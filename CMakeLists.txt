@@ -36,4 +36,6 @@ set(BowlingScoreBoard_SOURCES
 # maybe add WIN32 before the source-var
 add_executable(BowlingScoreBoard ${BowlingScoreBoard_SOURCES})
 target_link_libraries (BowlingScoreBoard Qt5::Widgets)
+target_link_libraries (BowlingScoreBoard Qt5::Core)
+target_link_libraries (BowlingScoreBoard Qt5::Network)
 
