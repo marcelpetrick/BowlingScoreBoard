@@ -59,3 +59,46 @@ void BSB_GameData::resetGame()
 }
 
 //----------------------------------------------------------------------------------
+
+//! todo evaluate if maybe QChar is better suited, because all entries are just one character wide
+QVector<std::tuple<QString, QString, QString> > BSB_GameData::getCurrentSituation()
+{
+    //! Plan is to return a vector of a triple (first throw, second throw, current frame).
+    //!
+    //! Strike is marked with X,
+    //! Spare with /,
+    //! not initalized values with " ",
+    //! 0 pins with -.
+
+    QVector<std::tuple<QString, QString, QString> > returnValue;
+
+    for(auto & elem : m_frameData)
+    {
+        QString firstItem = " ";
+        if (elem.first == 10)
+        {
+            firstItem = "X";
+        }
+        else if (elem.first == 0)
+        {
+            firstItem = "-";
+        }
+        else if (elem.first > 0  && elem.first < 10)
+        {
+             firstItem = QString::number(elem.first);
+        } // default case is " " via the initialization
+
+        //! todo
+        QString secondItem = "ö"; //placeholder
+        QString thirdItem = "x"; //placeholder
+
+        // pack all together
+        auto tuple = std::make_tuple(firstItem, secondItem, thirdItem);
+
+        returnValue.append(tuple);
+    }
+
+    return returnValue;
+}
+
+//----------------------------------------------------------------------------------
