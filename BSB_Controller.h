@@ -15,6 +15,7 @@
 
 // own includes
 #include "BSB_UdpListener.h"
+#include "BSB_GameData.h"
 
 // Qt includes
 #include <QObject>
@@ -45,6 +46,9 @@ private:
     //! todo
     std::unique_ptr<BSB_UdpListener> m_udpListener = nullptr;
     //std::shared_ptr<BSB_UdpListener> m_udpListener = nullptr;
+
+    //! Contains the game-data for all ten throws.
+    std::unique_ptr<BSB_GameData> m_gameData = nullptr;
 };
 
 //----------------------------------------------------------------------------------

@@ -24,6 +24,8 @@
 class BSB_FrameData
 {
 public:
+    BSB_FrameData() {}
+
     // values for the first, second and - if possible - third throw
     int first = -1;
     int second = -1;

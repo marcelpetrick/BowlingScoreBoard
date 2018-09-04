@@ -18,6 +18,10 @@
 
 BSB_Controller::BSB_Controller()
 {
+    // initialize
+    m_gameData.reset(new BSB_GameData);
+
+    // create the listener: the order matters; first we need some valid "container", then some reacting instance
     createListener();
 }
 
