@@ -61,7 +61,7 @@ public:
 
     //! Add at the "current" frame the given throw. In case no valid insertion was possible, return false.
     //! @todo could be as well handled by throwing an exception ..
-    bool insertThrow();
+    bool insertThrow(size_t pins);
 
     //! Resets the game: current data is deleted except the name.
     void resetGame();

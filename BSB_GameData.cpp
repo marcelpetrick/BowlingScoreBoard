@@ -38,11 +38,14 @@ const QString BSB_GameData::getName()
 
 //----------------------------------------------------------------------------------
 
-bool BSB_GameData::insertThrow()
+bool BSB_GameData::insertThrow(size_t pins)
 {
     bool returnValue = false;
 
-    //! @todo write the function to insert the value
+    //! @todo write the function to insert the value - handle it more correct!
+    m_frameData[currentField++].first = pins;
+
+    //! @attention Also check if more "inserts" are possible! Like: already ten frames done!
 
     return returnValue;
 }

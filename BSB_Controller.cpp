@@ -31,7 +31,16 @@ void BSB_Controller::slotIncomingMessage(const QString message)
 {
     qDebug() << "BSB_MainWindow::slotIncomingMessage: " << message;
 
-    // todo add here some checks for valid messages
+    //! @todo add here some checks for valid messages
+    // push into the gamedata
+    m_gameData->insertThrow(9); // fake!
+
+    auto foo = m_gameData->getCurrentSituation();
+    for(auto const& elem : foo)
+    {
+        // print straight forward ..
+        qDebug() << std::get<0>(elem) << "," << std::get<1>(elem) << "," << std::get<2>(elem);
+    }
 }
 
 //----------------------------------------------------------------------------------
