@@ -15,7 +15,7 @@
 #include "BSB_MainWindow.h"
 
 // Qt includes
-#include <QApplication>
+#include <QtWidgets/QApplication>
 
 //----------------------------------------------------------------------------------
 

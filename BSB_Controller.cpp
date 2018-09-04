@@ -18,7 +18,24 @@
 
 BSB_Controller::BSB_Controller()
 {
+    createListener();
+}
 
+//----------------------------------------------------------------------------------
+
+void BSB_Controller::slotIncomingMessage(const QString message)
+{
+    qDebug() << "BSB_MainWindow::slotFake: " << message;
+}
+
+//----------------------------------------------------------------------------------
+
+void BSB_Controller::createListener()
+{
+    // try to create an working udp-listener: reset with a new item
+    m_udpListener.reset(new BSB_UdpListener("localhost", 6543, nullptr)); // hardcoded by now, but shall be thrown into unnamed namespace
+
+    connect(m_udpListener, &BSB_UdpListener::signalIncomingMessage, this, &BSB_Controller::slotIncomingMessage);
 }
 
 //----------------------------------------------------------------------------------

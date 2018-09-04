@@ -13,14 +13,17 @@
 
 #pragma once
 
-#include "BSB_UdpListener.h" // just for testing
+// Qt includes
+#include <QtWidgets/QMainWindow>
 
-#include <QMainWindow>
+//----------------------------------------------------------------------------------
 
 namespace Ui {
 class BSB_MainWindow;
 class BSB_GameStepWidget; // element for the "turns"
 }
+
+//----------------------------------------------------------------------------------
 
 class BSB_MainWindow : public QMainWindow
 {
@@ -35,7 +38,5 @@ public slots:
 
 private:
     Ui::BSB_MainWindow *ui;
-
-    BSB_UdpListener* m_udpListener = nullptr;
 };
 
