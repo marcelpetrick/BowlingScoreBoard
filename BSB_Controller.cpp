@@ -25,7 +25,9 @@ BSB_Controller::BSB_Controller()
 
 void BSB_Controller::slotIncomingMessage(const QString message)
 {
-    qDebug() << "BSB_MainWindow::slotFake: " << message;
+    qDebug() << "BSB_MainWindow::slotIncomingMessage: " << message;
+
+    // todo add here some checks for valid messages
 }
 
 //----------------------------------------------------------------------------------
@@ -35,7 +37,8 @@ void BSB_Controller::createListener()
     // try to create an working udp-listener: reset with a new item
     m_udpListener.reset(new BSB_UdpListener("localhost", 6543, nullptr)); // hardcoded by now, but shall be thrown into unnamed namespace
 
-    connect(m_udpListener, &BSB_UdpListener::signalIncomingMessage, this, &BSB_Controller::slotIncomingMessage);
+    // source can be just a real ptr; shared or unqiue are not loved by the linker
+    connect(m_udpListener.get(), &BSB_UdpListener::signalIncomingMessage, this, &BSB_Controller::slotIncomingMessage);
 }
 
 //----------------------------------------------------------------------------------

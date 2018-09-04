@@ -60,7 +60,7 @@ void BSB_UdpListener::onIncomingData()
         QString const inputMessage(QString::fromLatin1(datagram));
 
         qDebug() << "got message: " << inputMessage;
-        emit signalIncomingCall(inputMessage); // forward to mainwindow
+        emit signalIncomingMessage(inputMessage); // forward to mainwindow
 
         //! @todo add here more code fo the handling of the incoming data
         if(inputMessage.contains("newGame"))

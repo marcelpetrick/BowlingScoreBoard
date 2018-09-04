@@ -20,3 +20,5 @@
 /.qmake.stash
 /BowlingScoreBoard
 BSB_Controller.o
+/moc_BSB_Controller.cpp
+/moc_BSB_Controller.o

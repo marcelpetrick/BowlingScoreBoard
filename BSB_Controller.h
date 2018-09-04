@@ -12,7 +12,10 @@
 //!----------------------------------------------------------------------------------
 
 // own includes
-#include "BSB_UdpListener.h" // just for testing
+#include "BSB_UdpListener.h"
+
+// Qt includes
+#include <QObject>
 
 // std-includes
 #include <memory> // for unique_ptr
@@ -26,18 +29,20 @@ class BSB_Controller : public QObject
     Q_OBJECT
 
 public:
+    //! todo
     BSB_Controller();
 
 public slots:
-    //!
+    //! todo
     void slotIncomingMessage(QString const message);
 
 private:
-    //! Create and
+    //! todo Create and
     void createListener();
 
     //! todo
     std::unique_ptr<BSB_UdpListener> m_udpListener = nullptr;
+    //std::shared_ptr<BSB_UdpListener> m_udpListener = nullptr;
 };
 
 //----------------------------------------------------------------------------------

@@ -26,6 +26,9 @@ BSB_MainWindow::BSB_MainWindow(QWidget *parent) :
     // testwise create some items and add them to the widget
     //GameStepWidget* step = new GameStepWidget();
     //ui->verticalLayout_f1->addItem(step);
+
+    // we need to create our controller
+    m_controller.reset(new BSB_Controller);
 }
 
 //----------------------------------------------------------------------------------

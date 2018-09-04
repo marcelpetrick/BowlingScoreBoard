@@ -31,7 +31,7 @@ public:
 
 signals:
     //! @todo add some other signals which are then relayed to the logic
-    void signalIncomingCall(QString const message);
+    void signalIncomingMessage(QString const message);
 
 private slots:
     //! In case the readRead-signal is fired, handle the data. Means: fetch all incoming datagrams.
