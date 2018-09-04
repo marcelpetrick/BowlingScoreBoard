@@ -22,12 +22,14 @@ SOURCES += \
     main.cpp \
     BSB_MainWindow.cpp \
     BSB_UdpListener.cpp \
-    BSB_Controller.cpp
+    BSB_Controller.cpp \
+    BSB_GameData.cpp
 
 HEADERS += \
     BSB_MainWindow.h \
     BSB_UdpListener.h \
-    BSB_Controller.h
+    BSB_Controller.h \
+    BSB_GameData.h
 
 FORMS += \
     BSB_MainWindow.ui \

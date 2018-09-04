@@ -11,6 +11,8 @@
 //! @brief  Contains the state of the game and handles the input-listener. Forwards the current state to the main-window.
 //!----------------------------------------------------------------------------------
 
+#pragma once
+
 // own includes
 #include "BSB_UdpListener.h"
 
