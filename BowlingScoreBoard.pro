@@ -32,5 +32,4 @@ HEADERS += \
     BSB_GameData.h
 
 FORMS += \
-    BSB_MainWindow.ui \
-    BSB_GameStepWidget.ui
+    BSB_MainWindow.ui

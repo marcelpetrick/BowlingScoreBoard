@@ -24,9 +24,13 @@
 class BSB_FrameData
 {
 public:
+    //! Generic constructor. Nothing special. Resetting not needed, because done via initialization.
     BSB_FrameData() {}
 
-    // values for the first, second and - if possible - third throw
+    //! Return the item to the initial state.
+    void reset() { first = -1; second = -1; third = -1; hasThird = false; }
+
+    //! values for the first, second and (if possible) third throw
     int first = -1;
     int second = -1;
     int third = -1;
@@ -42,12 +46,30 @@ public:
 class BSB_GameData
 {
 public:
+    //! default ctor - nothing special
     BSB_GameData();
+
+    //! Setter for the player-name.
+    void setName(QString const& input);
+
+    //! Getter for the player-name.
+    QString const getName();
+
+    //! Add at the "current" frame the given throw. In case no valid insertion was possible, return false.
+    //! @todo could be as well handled by throwing an exception ..
+    bool insertThrow();
+
+    //! Resets the game: all data is deleted except the name.
+    void resetGame();
 
 private:
     //! contains the player-name
     QString m_playerName;
 
     //! Contains the data of throws for all ten frames
-    QVector<BSB_GameData> m_gameData;
+    QVector<BSB_FrameData> m_frameData;
+
+    //! States which frame is the current one. Will progress in case a frame is "full".
+    //! Means: two throws or one strike.
+    size_t currentField = 0;
 };
