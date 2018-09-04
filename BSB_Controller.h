@@ -25,6 +25,15 @@
 
 //----------------------------------------------------------------------------------
 
+// for constants
+namespace {
+    QString const c_game = "game:"; // prefix for "game:reset"
+    QString const c_name = "name:"; // for "name:Klaus"
+    QString const c_throw = "throw:"; // for "throw:9"
+}
+
+//----------------------------------------------------------------------------------
+
 //! @todo add the big unit-test at least for this component
 
 class BSB_Controller : public QObject
@@ -43,11 +52,10 @@ private:
     //! todo Create and
     void createListener();
 
-    //! todo
+    //! The UDP-listener for incoming messages (triggered via sendip or PacketSender).
     std::unique_ptr<BSB_UdpListener> m_udpListener = nullptr;
-    //std::shared_ptr<BSB_UdpListener> m_udpListener = nullptr;
 
-    //! Contains the game-data for all ten throws.
+    //! Contains the game-data for all ten frames.
     std::unique_ptr<BSB_GameData> m_gameData = nullptr;
 };
 

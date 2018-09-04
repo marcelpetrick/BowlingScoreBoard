@@ -30,7 +30,7 @@ public:
     explicit BSB_UdpListener(QString const receiverInterface, quint32 receiverPort, QObject* parent = nullptr);
 
 signals:
-    //! @todo add some other signals which are then relayed to the logic
+    //! Used to forward the data from incoming packets to the controller. No filtering is applied!
     void signalIncomingMessage(QString const message);
 
 private slots:
@@ -38,7 +38,6 @@ private slots:
     void onIncomingData();
 
 private:
-    //! todo
+    //! Socket which will be used.
     std::unique_ptr<QUdpSocket> m_udpSocket;
-
 };

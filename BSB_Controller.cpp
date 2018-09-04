@@ -29,7 +29,22 @@ BSB_Controller::BSB_Controller()
 
 void BSB_Controller::slotIncomingMessage(const QString message)
 {
-    qDebug() << "BSB_MainWindow::slotIncomingMessage: " << message;
+    qDebug() << "BSB_MainWindow::slotIncomingMessage: " << message; // todom remove
+
+    //! Check for valid data and handle it
+    if(message.startsWith(c_game))
+    {
+        QString const rest = message.right(message.size() - c_game.size());
+        qDebug() << "rest is:" << rest;
+        if(rest == "reset")
+        {
+            qDebug() << "resetGame!!!";
+            m_gameData->resetGame();
+        }
+    } else if(true)
+    {
+        //! @todo add more checks
+    }
 
     //! @todo add here some checks for valid messages
     // push into the gamedata

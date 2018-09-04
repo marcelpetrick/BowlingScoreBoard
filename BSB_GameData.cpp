@@ -43,7 +43,7 @@ bool BSB_GameData::insertThrow(size_t pins)
     bool returnValue = false;
 
     //! @todo write the function to insert the value - handle it more correct!
-    m_frameData[currentField++].first = pins;
+    m_frameData[m_currentField++].first = pins;
 
     //! @attention Also check if more "inserts" are possible! Like: already ten frames done!
 
@@ -59,6 +59,8 @@ void BSB_GameData::resetGame()
     {
         element.reset();
     }
+
+    m_currentField = 0;
 }
 
 //----------------------------------------------------------------------------------

@@ -28,7 +28,7 @@ BSB_UdpListener::BSB_UdpListener(const QString receiverInterface, quint32 receiv
     // if wrongly or not configured, then ... bad luck!
     bool const result = m_udpSocket->bind(QHostAddress(receiverInterface),
                                           static_cast<quint16>(receiverPort),
-                                          QUdpSocket::ShareAddress|QUdpSocket::ReuseAddressHint); // this is the ip:port-combo which is also used by the regular ShipSensorSim for sending the tickets out
+                                          QUdpSocket::ShareAddress | QUdpSocket::ReuseAddressHint); // this is the ip:port-combo which is also used by the regular ShipSensorSim for sending the tickets out
     if(result)
     {
         qDebug() << "Connected to" << receiverInterface << "on port" << receiverPort;
@@ -62,7 +62,7 @@ void BSB_UdpListener::onIncomingData()
         qDebug() << "got message: " << inputMessage;
         emit signalIncomingMessage(inputMessage); // forward to mainwindow
 
-        //! @todo add here more code fo the handling of the incoming data
+        //! @todo add here more code for the handling of the incoming data
         if(inputMessage.contains("newGame"))
         {
             qDebug() << "ok trigger now a new game :)";

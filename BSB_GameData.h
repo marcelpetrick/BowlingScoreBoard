@@ -78,5 +78,5 @@ private:
 
     //! States which frame is the current one. Will progress in case a frame is "full".
     //! Means: two throws or one strike.
-    size_t currentField = 0;
+    size_t m_currentField = 0;
 };
