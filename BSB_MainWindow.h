@@ -21,6 +21,12 @@
 
 //----------------------------------------------------------------------------------
 
+// for constants
+namespace {
+    //! Determines how long the status message is visible. After timer runs out, it is removed.
+    unsigned int const c_StatusBarDelay = 5000;
+}
+
 namespace Ui {
     class BSB_MainWindow;
 }
@@ -36,11 +42,28 @@ public:
     explicit BSB_MainWindow(QWidget *parent = nullptr);
     ~BSB_MainWindow();
 
+private slots:
+    //! Slot for the help-menu-entries
+    void slotAbout();
+
 private:
+    //! create actions and fitting menues for the "help-menu"
+    void createActions();
+    void createMenus();
+
+    //! Print the given string to the status-bar.
+    void printStatus(QString const& message);
+
     //! the UI
     Ui::BSB_MainWindow *ui;
 
+    //! the game-controller: the "logic" behind the UI
     std::unique_ptr<BSB_Controller> m_controller = nullptr;
+
+    //! members for the "help"-menu
+    QMenu* m_helpMenu = nullptr;
+    QAction* m_aboutAction = nullptr;
+    QAction* m_aboutQtAction = nullptr;
 };
 
 //----------------------------------------------------------------------------------
