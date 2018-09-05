@@ -123,6 +123,9 @@ void BSB_MainWindow::setupGameBoard()
     }
 
     ui->centralWidget->setLayout(newLayout);
+
+    // enforce minimal view initially
+    ui->centralWidget->resize(minimumSizeHint());
 }
 
 //----------------------------------------------------------------------------

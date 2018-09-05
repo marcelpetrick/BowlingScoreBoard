@@ -6,43 +6,20 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>876</width>
-    <height>360</height>
+    <width>300</width>
+    <height>100</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>BowlingScoreBoard</string>
   </property>
-  <widget class="QWidget" name="centralWidget">
-   <widget class="QWidget" name="horizontalLayoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>80</x>
-      <y>70</y>
-      <width>621</width>
-      <height>151</height>
-     </rect>
-    </property>
-    <layout class="QHBoxLayout" name="horizontalLayout"/>
-   </widget>
-   <widget class="QWidget" name="horizontalLayoutWidget_2">
-    <property name="geometry">
-     <rect>
-      <x>120</x>
-      <y>30</y>
-      <width>160</width>
-      <height>80</height>
-     </rect>
-    </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_2"/>
-   </widget>
-  </widget>
+  <widget class="QWidget" name="centralWidget"/>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>876</width>
+     <width>300</width>
      <height>21</height>
     </rect>
    </property>
