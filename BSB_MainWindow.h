@@ -54,6 +54,9 @@ private:
     //! Print the given string to the status-bar.
     void printStatus(QString const& message);
 
+    //! Create the board with the ten frames.
+    void setupGameBoard();
+
     //! the UI
     Ui::BSB_MainWindow *ui;
 

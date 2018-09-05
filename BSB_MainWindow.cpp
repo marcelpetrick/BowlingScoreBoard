@@ -17,6 +17,8 @@
 
 // Qt includes
 #include <QtWidgets/QMessageBox>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QHBoxLayout>
 
 //----------------------------------------------------------------------------------
 
@@ -26,12 +28,15 @@ BSB_MainWindow::BSB_MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    // we need to create our controller
-    m_controller.reset(new BSB_Controller);    
-
     // create the menu
     createActions();
     createMenus();
+
+    // create the game-board
+    setupGameBoard();
+
+    // we need to create our controller
+    m_controller.reset(new BSB_Controller);
 }
 
 //----------------------------------------------------------------------------------
@@ -91,6 +96,33 @@ void BSB_MainWindow::printStatus(const QString& message)
 {
     // messages shall disappear after five seconds
     ui->statusBar->showMessage(message, c_StatusBarDelay);
+}
+
+//----------------------------------------------------------------------------
+
+void BSB_MainWindow::setupGameBoard()
+{
+    // add a style via QSS
+    setStyleSheet("QLabel{ background-color : rgba( 128, 128, 128, 255); border-radius : 4px; border: 1px solid black }");
+
+    QHBoxLayout* newLayout = new QHBoxLayout;
+
+    // add the first cell, which contains the player-name
+    QLabel* const label = new QLabel;
+    label->setText("name\n%"); // initially not set
+    label->setWordWrap(false);
+    newLayout->addWidget(label);
+
+    // add cells for the frames
+    for (int i = 0; i < 10; ++i)
+    {
+        QLabel* const label = new QLabel;
+        label->setText(QString::number(i));
+        label->setWordWrap(false);
+        newLayout->addWidget(label);
+    }
+
+    ui->centralWidget->setLayout(newLayout);
 }
 
 //----------------------------------------------------------------------------
