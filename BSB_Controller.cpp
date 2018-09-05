@@ -54,6 +54,7 @@ void BSB_Controller::slotIncomingMessage(const QString& message)
         {
             // .. and cut them to the leftmost 10 characters
             m_gameData->setName(suffix.left(10));
+            emit signalSetName(m_gameData->getName());
         }
     }
     else
@@ -61,14 +62,14 @@ void BSB_Controller::slotIncomingMessage(const QString& message)
     if(message.startsWith(c_throw))
     {
         QString const suffix = message.right(message.size() - c_throw.size());
-        // just allow values between 0..10
-        // So parse to int
+        // Just allow values between 0..10.
+        // First parse to int ..
         bool ok;
         int const value = suffix.toInt(&ok, 10);
-        // conversion worked?
+        // .. conversion worked?
         if(ok)
         {
-            // check range
+            // also: check range
             if(value >= 0 && value <= 10)
             {
                 m_gameData->insertThrow(static_cast<size_t>(value));
@@ -76,14 +77,11 @@ void BSB_Controller::slotIncomingMessage(const QString& message)
         }
     }
 
-    // update the situation of the gaming-board
-    //! @todo implement - just a placeholder
+    // update the situation of the gaming-board.
+    // Is called now each time a message (valid or invalid); but this can be
+    // moved into the previous inner if-cases
     auto const currentSituation = m_gameData->getCurrentSituation();
-    for(auto const& elem : currentSituation)
-    {
-        // print them straightforward ..
-        qDebug() << std::get<0>(elem) << "," << std::get<1>(elem) << "," << std::get<2>(elem);
-    }
+    emit signalCurrentSituation(currentSituation);
 }
 
 //----------------------------------------------------------------------------------

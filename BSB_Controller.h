@@ -48,7 +48,11 @@ public:
     ~BSB_Controller() = default;
 
 signals:
+    //! Used to transport the current frame-state to the UI.
     void signalCurrentSituation(QVector<std::tuple<QString, QString, QString> > state);
+
+    //! Used to transport the player's name to the UI.
+    void signalSetName(QString const name);
 
 public slots:
     //! Handle and process incoming messages. Means: parse them

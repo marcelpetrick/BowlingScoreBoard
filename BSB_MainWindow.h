@@ -47,8 +47,11 @@ public:
     ~BSB_MainWindow();
 
 public slots: // check if can be private
-    //! todo
+    //! Processes the incoming state of the frames and assigns the result ot the ui.
     void slotUpdateBoard(QVector<std::tuple<QString, QString, QString> > state);
+
+    //! Change the name inside the ui.
+    void slotUpdateName(QString const name);
 
 private slots:
     //! Slot for the help-menu-entries

@@ -36,6 +36,10 @@ BSB_MainWindow::BSB_MainWindow(QWidget *parent) :
 
     // we need to create our controller
     m_controller.reset(new BSB_Controller);
+
+    // connections for handling game-state and player-name
+    connect(m_controller.get(), &BSB_Controller::signalCurrentSituation, this, &BSB_MainWindow::slotUpdateBoard);
+    connect(m_controller.get(), &BSB_Controller::signalSetName, this, &BSB_MainWindow::slotUpdateName);
 }
 
 //----------------------------------------------------------------------------------
@@ -49,10 +53,41 @@ BSB_MainWindow::~BSB_MainWindow()
 
 void BSB_MainWindow::slotUpdateBoard(QVector<std::tuple<QString, QString, QString> > state)
 {
-    qDebug() << "called: slotUpdateBoard"; //todom remove
+    // print current state to stdout until the ui works
+    for(auto const& elem : state)
+    {
+        // print them straightforward ..
+        qDebug() << std::get<0>(elem) << "," << std::get<1>(elem) << "," << std::get<2>(elem); //todom remove
+    }
 
-    // todo add some processing of the current state
+    // forward the data to the ui
+    int counter = 0;
+    for(auto const& elem : state)
+    {
+        // construct some appealing layout for each frame
+        QString text;
+        text.append(std::get<0>(elem));
+        text.append("  ");
+        text.append(std::get<1>(elem));
+        text.append("\n");
+        text.append(std::get<2>(elem));
 
+        // assign to the corresponding label
+        qDebug() << "text:" << text; //todom remove
+        m_labelFrame[counter]->setText(text);
+        // prepare for next frame
+        counter++;
+    }
+}
+
+//----------------------------------------------------------------------------------
+
+void BSB_MainWindow::slotUpdateName(const QString name)
+{
+    if(m_labelPlayerName)
+    {
+        m_labelPlayerName->setText(QString("name\n--\n").append(name));
+    }
 }
 
 //----------------------------------------------------------------------------------
