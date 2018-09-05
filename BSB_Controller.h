@@ -41,15 +41,17 @@ class BSB_Controller : public QObject
     Q_OBJECT
 
 public:
-    //! todo
-    BSB_Controller();
+    //! ctor / dtor
+    explicit BSB_Controller();
+    ~BSB_Controller() = default;
 
 public slots:
-    //! todo
+    //! Handle and process incoming messages. Means: parse them
+    //! and - if necessary - trigger corresponding action.
     void slotIncomingMessage(const QString& message);
 
 private:
-    //! todo Create and
+    //! Creates and configures an UDP-listener.
     void createListener();
 
     //! The UDP-listener for incoming messages (triggered via sendip or PacketSender).

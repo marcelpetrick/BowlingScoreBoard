@@ -8,7 +8,8 @@
 //! Create a score-board which computes the score and displays it to the player.
 //!
 //! @class  BSB_GameData
-//! @brief  todo
+//! @brief  Handles and contains all the data which is necessary to describe the current
+//!         game-situation.
 //!----------------------------------------------------------------------------------
 
 #pragma once
@@ -27,8 +28,9 @@
 class BSB_FrameData
 {
 public:
-    //! Generic constructor. Nothing special. Resetting not needed, because done via initialization.
-    explicit BSB_FrameData() {}
+    //! Generic constructor/destructor. Nothing special. Resetting not needed, because done via initialization.
+    BSB_FrameData() = default;
+    ~BSB_FrameData() = default;
 
     //! Return the item to the initial state.
     void reset() { first = -1; second = -1; third = -1; hasThird = false; }
@@ -52,6 +54,7 @@ class BSB_GameData
 public:
     //! default ctor - nothing special
     explicit BSB_GameData();
+    ~BSB_GameData() = default;
 
     //! Setter for the player-name.
     void setName(QString const& input);

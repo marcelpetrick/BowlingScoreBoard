@@ -8,7 +8,8 @@
 //! Create a score-board which computes the score and displays it to the player.
 //!
 //! @class  BSB_GameData
-//! @brief  todo
+//! @brief  Handles and contains all the data which is necessary to describe the current
+//!         game-situation.
 //!----------------------------------------------------------------------------------
 
 // own includes

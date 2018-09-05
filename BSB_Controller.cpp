@@ -43,6 +43,7 @@ void BSB_Controller::slotIncomingMessage(const QString& message)
             m_gameData->resetGame();
         }
     }
+    else
     // name-related messages (right now just "name:XYZ" for setting the name of the player)
     if(message.startsWith(c_name))
     {
@@ -55,15 +56,32 @@ void BSB_Controller::slotIncomingMessage(const QString& message)
             m_gameData->setName(suffix.left(10));
         }
     }
-
-    //! @todo add here some checks for valid messages
-    // push into the gamedata
-    m_gameData->insertThrow(9); // fake!
-
-    auto foo = m_gameData->getCurrentSituation();
-    for(auto const& elem : foo)
+    else
+    // throw-related messages (right now just "throw:n", where n is [0..10])
+    if(message.startsWith(c_throw))
     {
-        // print straight forward ..
+        QString const suffix = message.right(message.size() - c_throw.size());
+        // just allow values between 0..10
+        // So parse to int
+        bool ok;
+        int const value = suffix.toInt(&ok, 10);
+        // conversion worked?
+        if(ok)
+        {
+            // check range
+            if(value >= 0 && value <= 10)
+            {
+                m_gameData->insertThrow(static_cast<size_t>(value));
+            }
+        }
+    }
+
+    // update the situation of the gaming-board
+    //! @todo implement - just a placeholder
+    auto const currentSituation = m_gameData->getCurrentSituation();
+    for(auto const& elem : currentSituation)
+    {
+        // print them straightforward ..
         qDebug() << std::get<0>(elem) << "," << std::get<1>(elem) << "," << std::get<2>(elem);
     }
 }
