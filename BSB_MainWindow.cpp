@@ -17,7 +17,6 @@
 
 // Qt includes
 #include <QtWidgets/QMessageBox>
-#include <QtWidgets/QLabel>
 #include <QtWidgets/QHBoxLayout>
 
 //----------------------------------------------------------------------------------
@@ -108,18 +107,23 @@ void BSB_MainWindow::setupGameBoard()
     QHBoxLayout* newLayout = new QHBoxLayout;
 
     // add the first cell, which contains the player-name
-    QLabel* const label = new QLabel;
-    label->setText("name\n%"); // initially not set
-    label->setWordWrap(false);
-    newLayout->addWidget(label);
+    m_labelPlayerName = new QLabel(this);
+    m_labelPlayerName->setToolTip(tr("Displays the current players name.\nInitially not set."));
+    m_labelPlayerName->setText("name\n--\n "); // initially not set
+    m_labelPlayerName->setWordWrap(false);
+    m_labelPlayerName->setAlignment(Qt::AlignCenter);
+    newLayout->addWidget(m_labelPlayerName);
 
     // add cells for the frames
     for (int i = 0; i < 10; ++i)
     {
-        QLabel* const label = new QLabel;
-        label->setText(QString::number(i));
+        QLabel* const label = new QLabel(this);
+        label->setToolTip(tr("Displays the value of this frame."));
+        label->setText(" \n--\n "); // initially not set
         label->setWordWrap(false);
-        newLayout->addWidget(label);
+        label->setAlignment(Qt::AlignCenter);
+        m_labelFrame.append(label);
+        newLayout->addWidget(m_labelFrame[i]);
     }
 
     ui->centralWidget->setLayout(newLayout);

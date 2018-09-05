@@ -18,6 +18,7 @@
 
 // Qt includes
 #include <QtWidgets/QMainWindow>
+#include <QtWidgets/QLabel>
 
 //----------------------------------------------------------------------------------
 
@@ -57,7 +58,7 @@ private:
     //! Create the board with the ten frames.
     void setupGameBoard();
 
-    //! the UI
+    //! the whole UI
     Ui::BSB_MainWindow *ui;
 
     //! the game-controller: the "logic" behind the UI
@@ -67,6 +68,11 @@ private:
     QMenu* m_helpMenu = nullptr;
     QAction* m_aboutAction = nullptr;
     QAction* m_aboutQtAction = nullptr;
+
+    //! members which allow easier access to the labels for the
+    //! player's name and the frames
+    QLabel* m_labelPlayerName = nullptr; // does not need explicite memory-handling, because will be a child of "this" (parent)
+    QVector<QLabel*> m_labelFrame;
 };
 
 //----------------------------------------------------------------------------------
