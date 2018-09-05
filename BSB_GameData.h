@@ -2,7 +2,7 @@
 //! Part of the project "BowlingScoreBoard"
 //!
 //! @author mail@marcelpetrick.it
-//! @date   20180903
+//! @date   20180905
 //!
 //! Coding challenge with C++/Qt/Cmake.
 //! Create a score-board which computes the score and displays it to the player.
@@ -28,7 +28,7 @@ class BSB_FrameData
 {
 public:
     //! Generic constructor. Nothing special. Resetting not needed, because done via initialization.
-    BSB_FrameData() {}
+    explicit BSB_FrameData() {}
 
     //! Return the item to the initial state.
     void reset() { first = -1; second = -1; third = -1; hasThird = false; }
@@ -51,7 +51,7 @@ class BSB_GameData
 {
 public:
     //! default ctor - nothing special
-    BSB_GameData();
+    explicit BSB_GameData();
 
     //! Setter for the player-name.
     void setName(QString const& input);

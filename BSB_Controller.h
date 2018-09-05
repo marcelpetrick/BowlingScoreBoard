@@ -2,7 +2,7 @@
 //! Part of the project "BowlingScoreBoard"
 //!
 //! @author mail@marcelpetrick.it
-//! @date   20180903
+//! @date   20180905
 //!
 //! Coding challenge with C++/Qt/Cmake.
 //! Create a score-board which computes the score and displays it to the player.
@@ -28,8 +28,8 @@
 // for constants
 namespace {
     QString const c_game = "game:"; // prefix for "game:reset"
-    QString const c_name = "name:"; // for "name:Klaus"
-    QString const c_throw = "throw:"; // for "throw:9"
+    QString const c_name = "name:"; // prefix for "name:Klaus"
+    QString const c_throw = "throw:"; // prefix for "throw:9"
 }
 
 //----------------------------------------------------------------------------------

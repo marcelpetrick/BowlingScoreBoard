@@ -4,7 +4,7 @@
 # description:  Coding challenge with C++/Qt.
 #               Create a score-board which computes the score and displays it to the player.
 # author: mail@marcelpetrick.it
-# date: 20180903
+# date: 20180905
 #----------------------------------------------------------------------------------
 
 QT += \

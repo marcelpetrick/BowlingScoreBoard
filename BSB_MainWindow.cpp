@@ -2,7 +2,7 @@
 //! Part of the project "BowlingScoreBoard"
 //!
 //! @author mail@marcelpetrick.it
-//! @date   20180903
+//! @date   20180905
 //!
 //! Coding challenge with C++/Qt/Cmake.
 //! Create a score-board which computes the score and displays it to the player.
@@ -22,10 +22,6 @@ BSB_MainWindow::BSB_MainWindow(QWidget *parent) :
     ui(new Ui::BSB_MainWindow)
 {
     ui->setupUi(this);
-
-    // testwise create some items and add them to the widget
-    //GameStepWidget* step = new GameStepWidget();
-    //ui->verticalLayout_f1->addItem(step);
 
     // we need to create our controller
     m_controller.reset(new BSB_Controller);

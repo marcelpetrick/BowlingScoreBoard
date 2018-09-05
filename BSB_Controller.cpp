@@ -2,7 +2,7 @@
 //! Part of the project "BowlingScoreBoard"
 //!
 //! @author mail@marcelpetrick.it
-//! @date   20180903
+//! @date   20180905
 //!
 //! Coding challenge with C++/Qt/Cmake.
 //! Create a score-board which computes the score and displays it to the player.
@@ -63,7 +63,7 @@ void BSB_Controller::slotIncomingMessage(const QString message)
 void BSB_Controller::createListener()
 {
     // try to create an working udp-listener: reset with a new item
-    m_udpListener.reset(new BSB_UdpListener("localhost", 6543, nullptr)); // hardcoded by now, but shall be thrown into unnamed namespace
+    m_udpListener.reset(new BSB_UdpListener(c_interface, c_port, nullptr)); // hardcoded configuration
 
     // source can be just a real ptr; shared or unqiue are not loved by the linker
     connect(m_udpListener.get(), &BSB_UdpListener::signalIncomingMessage, this, &BSB_Controller::slotIncomingMessage);
