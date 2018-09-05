@@ -8,7 +8,7 @@
 //! Create a score-board which computes the score and displays it to the player.
 //!
 //! @class  BSB_MainWindow
-//! @brief  todo
+//! @brief  Handles the state of the ui and owns the background-logic: the controller.
 //!----------------------------------------------------------------------------------
 
 // own includes

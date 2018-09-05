@@ -8,15 +8,10 @@
 //! Create a score-board which computes the score and displays it to the player.
 //!
 //! @class  BSB_UdpListener
-//! @brief  todo
+//! @brief  Listens for incoming udp-packets and forwards them via signal.
 //!----------------------------------------------------------------------------------
 
 #include "BSB_UdpListener.h"
-
-// Qt includes
-//#include <QtCore/QDebug> //todoM remove: just for debugging
-//#include <QtCore/QDateTime> //todoM remove: just for debugging
-//qDebug() << QDateTime::currentDateTime().toString("mm:ss:z") << "nonsense"; // todoM remove
 
 //----------------------------------------------------------------------------------
 
@@ -45,13 +40,11 @@ BSB_UdpListener::BSB_UdpListener(const QString receiverInterface, const quint16 
 
 void BSB_UdpListener::onIncomingData()
 {
-    qDebug() << "BSB_UdpListener::onIncomingData()";
-
     while (m_udpSocket->hasPendingDatagrams())
     {
         // prepare a buffer for the content
         QByteArray datagram;
-        datagram.resize(m_udpSocket->pendingDatagramSize());
+        datagram.resize(static_cast<int>(m_udpSocket->pendingDatagramSize()));
 
         // prepare containers for additional information
         QHostAddress sender;
@@ -59,18 +52,8 @@ void BSB_UdpListener::onIncomingData()
         m_udpSocket->readDatagram(datagram.data(), datagram.size(), &sender, &senderPort);
         QString const inputMessage(QString::fromLatin1(datagram));
 
-        qDebug() << "got message: " << inputMessage;
-        emit signalIncomingMessage(inputMessage); // forward to mainwindow
-
-        //! @todo add here more code for the handling of the incoming data
-        if(inputMessage.contains("newGame"))
-        {
-            qDebug() << "ok trigger now a new game :)";
-        }
-        else
-        {
-            qDebug() << ":'("; // should be never visible!
-        }
+        // forward to mainwindow
+        emit signalIncomingMessage(inputMessage);
     }
 }
 

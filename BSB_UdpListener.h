@@ -8,7 +8,7 @@
 //! Create a score-board which computes the score and displays it to the player.
 //!
 //! @class  BSB_UdpListener
-//! @brief  todo
+//! @brief  Listens for incoming udp-packets and forwards them via signal.
 //!----------------------------------------------------------------------------------
 
 #pragma once
