@@ -52,7 +52,7 @@ public slots: // check if can be private
 
 private slots:
     //! Slot for the help-menu-entries
-    void slotAbout();
+    void slotAboutBsb();
 
 private:
     //! create actions and fitting menues for the "help-menu"

@@ -52,6 +52,7 @@ void BSB_MainWindow::slotUpdateBoard(QVector<std::tuple<QString, QString, QStrin
     qDebug() << "called: slotUpdateBoard"; //todom remove
 
     // todo add some processing of the current state
+
 }
 
 //----------------------------------------------------------------------------------
@@ -62,7 +63,7 @@ void BSB_MainWindow::createActions()
     m_aboutAction = new QAction(tr("About BowlingScoreBoard"), this);
     m_aboutAction->setStatusTip(tr("Show this application's About box"));
     m_aboutAction->setShortcut(Qt::CTRL + Qt::Key_A);
-    connect(m_aboutAction, &QAction::triggered, this, &BSB_MainWindow::slotAbout);
+    connect(m_aboutAction, &QAction::triggered, this, &BSB_MainWindow::slotAboutBsb);
 
     // about Qt
     m_aboutQtAction = new QAction(tr("About Qt"), this);
@@ -85,13 +86,20 @@ void BSB_MainWindow::createMenus()
 
 //----------------------------------------------------------------------------------
 
-void BSB_MainWindow::slotAbout()
+void BSB_MainWindow::slotAboutBsb()
 {
     printStatus(tr("Invoked Help|About BowlingScoreBoard"));
 
     QMessageBox mBox(QMessageBox::Information, tr("About BowlingScoreBoard"),
-                     tr("Small coding-challenge in C++/Qt.<br>"
-                        "Should work cross-platform.<br>"
+                     tr("Small coding-challenge in C++/Qt/Cmake. Works cross-platform.<br>"
+                        "<br>"
+                        "Initially visible state is a \"new game\".<br>"
+                        "The BowlingScoreBoard reacts to UDP-input on localhost:6543.<br>"
+                        "<br>"
+                        "message \"game:reset\" would reset the game.<br>"
+                        "message \"name:Klaus\" would set the player-name to Klaus.<br>"
+                        "message \"throw:3\" would insert a simulated throw which fell 3 pins.<br>"
+                        "Other incoming messages are ignored. The input's validity is checked to a certain extent.<br>"
                         "<br>"
                         "Developed by <a href='mail@marcelpetrick.it'>mail@marcelpetrick.it</a><br>"));
     mBox.setTextFormat(Qt::RichText);
