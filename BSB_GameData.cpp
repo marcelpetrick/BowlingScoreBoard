@@ -14,6 +14,8 @@
 // own includes
 #include "BSB_GameData.h"
 
+//#include <QtCore/QDebug>
+
 //----------------------------------------------------------------------------------
 
 BSB_GameData::BSB_GameData()
@@ -27,6 +29,7 @@ BSB_GameData::BSB_GameData()
 void BSB_GameData::setName(const QString &input)
 {
     m_playerName = input;
+    //qDebug() << "setName:" << input; // todom remove
 }
 
 //----------------------------------------------------------------------------------
@@ -43,7 +46,7 @@ bool BSB_GameData::insertThrow(size_t pins)
     bool returnValue = false;
 
     //! @todo write the function to insert the value - handle it more correct!
-    m_frameData[m_currentField++].first = pins;
+    m_frameData[m_currentField++].first = static_cast<int>(pins);
 
     //! @attention Also check if more "inserts" are possible! Like: already ten frames done!
 

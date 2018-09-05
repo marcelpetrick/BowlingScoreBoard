@@ -46,7 +46,7 @@ public:
 
 public slots:
     //! todo
-    void slotIncomingMessage(QString const message);
+    void slotIncomingMessage(const QString& message);
 
 private:
     //! todo Create and

@@ -27,23 +27,33 @@ BSB_Controller::BSB_Controller()
 
 //----------------------------------------------------------------------------------
 
-void BSB_Controller::slotIncomingMessage(const QString message)
+void BSB_Controller::slotIncomingMessage(const QString& message)
 {
     qDebug() << "BSB_MainWindow::slotIncomingMessage: " << message; // todom remove
 
     //! Check for valid data and handle it
+    // game-status related messages (right now just "game:reset")
     if(message.startsWith(c_game))
     {
-        QString const rest = message.right(message.size() - c_game.size());
-        qDebug() << "rest is:" << rest;
-        if(rest == "reset")
+        QString const suffix = message.right(message.size() - c_game.size());
+        qDebug() << "game rest is:" << suffix;
+        if(suffix == "reset")
         {
             qDebug() << "resetGame!!!";
             m_gameData->resetGame();
         }
-    } else if(true)
+    }
+    // name-related messages (right now just "name:XYZ" for setting the name of the player)
+    if(message.startsWith(c_name))
     {
-        //! @todo add more checks
+        QString const suffix = message.right(message.size() - c_name.size());
+        // just allow alphanumeric strings as names
+        QRegExp const justAlphanumericCharacters("^[a-zA-Z0-9]*$");
+        if(justAlphanumericCharacters.exactMatch(suffix))
+        {
+            // .. and cut them to the leftmost 10 characters
+            m_gameData->setName(suffix.left(10));
+        }
     }
 
     //! @todo add here some checks for valid messages

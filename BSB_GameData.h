@@ -78,5 +78,5 @@ private:
 
     //! States which frame is the current one. Will progress in case a frame is "full".
     //! Means: two throws or one strike.
-    size_t m_currentField = 0;
+    int m_currentField = 0; //! note: int and not size_t, because QVector relies on int. Else compiler warns: C4267.
 };
