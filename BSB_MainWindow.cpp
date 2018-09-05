@@ -8,7 +8,7 @@
 //! Create a score-board which computes the score and displays it to the player.
 //!
 //! @class  BSB_MainWindow
-//! @brief  Handles the state of the ui and owns the background-logic: the controller.
+//! @brief  Handles the state of the ui and owns the background-logic (the controller).
 //!----------------------------------------------------------------------------------
 
 // own includes
@@ -43,6 +43,15 @@ BSB_MainWindow::BSB_MainWindow(QWidget *parent) :
 BSB_MainWindow::~BSB_MainWindow()
 {
     delete ui;
+}
+
+//----------------------------------------------------------------------------------
+
+void BSB_MainWindow::slotUpdateBoard(QVector<std::tuple<QString, QString, QString> > state)
+{
+    qDebug() << "called: slotUpdateBoard"; //todom remove
+
+    // todo add some processing of the current state
 }
 
 //----------------------------------------------------------------------------------

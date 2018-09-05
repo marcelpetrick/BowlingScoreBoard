@@ -8,7 +8,7 @@
 //! Create a score-board which computes the score and displays it to the player.
 //!
 //! @class  BSB_MainWindow
-//! @brief  Handles the state of the ui and owns the background-logic: the controller.
+//! @brief  Handles the state of the ui and owns the background-logic (the controller).
 //!----------------------------------------------------------------------------------
 
 #pragma once
@@ -19,6 +19,9 @@
 // Qt includes
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QLabel>
+
+// std-includes
+#include <tuple>
 
 //----------------------------------------------------------------------------------
 
@@ -42,6 +45,10 @@ public:
     //! ctor/ dtor
     explicit BSB_MainWindow(QWidget *parent = nullptr);
     ~BSB_MainWindow();
+
+public slots: // check if can be private
+    //! todo
+    void slotUpdateBoard(QVector<std::tuple<QString, QString, QString> > state);
 
 private slots:
     //! Slot for the help-menu-entries

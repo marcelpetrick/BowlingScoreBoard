@@ -18,10 +18,12 @@
 #include "BSB_GameData.h"
 
 // Qt includes
-#include <QObject>
+#include <QtCore/QObject>
+#include <QtCore/QVector>
 
 // std-includes
 #include <memory> // for unique_ptr
+#include <tuple>
 
 //----------------------------------------------------------------------------------
 
@@ -44,6 +46,9 @@ public:
     //! ctor / dtor
     explicit BSB_Controller();
     ~BSB_Controller() = default;
+
+signals:
+    void signalCurrentSituation(QVector<std::tuple<QString, QString, QString> > state);
 
 public slots:
     //! Handle and process incoming messages. Means: parse them

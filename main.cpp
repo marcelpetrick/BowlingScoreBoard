@@ -8,7 +8,7 @@
 //! Create a score-board which computes the score and displays it to the player.
 //!
 //! @class  BSB_MainWindow
-//! @brief  todo
+//! @brief  Contains the main...
 //!----------------------------------------------------------------------------------
 
 // own includes
