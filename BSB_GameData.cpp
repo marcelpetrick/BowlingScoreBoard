@@ -30,7 +30,6 @@ BSB_GameData::BSB_GameData()
 void BSB_GameData::setName(const QString &input)
 {
     m_playerName = input;
-    //qDebug() << "setName:" << input; // todom remove
 }
 
 //----------------------------------------------------------------------------------
@@ -48,6 +47,8 @@ bool BSB_GameData::insertThrow(size_t pins)
 
     //! @todo write the function to insert the value - handle it more correct!
     m_frameData[m_currentField++].first = static_cast<int>(pins);
+
+    //
 
     //! @attention Also check if more "inserts" are possible! Like: already ten frames done!
 
@@ -83,10 +84,11 @@ QVector<std::tuple<QString, QString, QString> > BSB_GameData::getCurrentSituatio
 
     for(auto & elem : m_frameData)
     {
+        // the first throw of a frame
         QString firstItem = " ";
         if (elem.first == 10)
         {
-            firstItem = "X";
+            firstItem = "X"; // strike!
         }
         else if (elem.first == 0)
         {
@@ -97,9 +99,26 @@ QVector<std::tuple<QString, QString, QString> > BSB_GameData::getCurrentSituatio
              firstItem = QString::number(elem.first);
         } // default case is " " via the initialization
 
-        //! todo
-        QString secondItem = "ö"; //placeholder
-        QString thirdItem = "x"; //placeholder
+        // the second throw of a frame
+        QString secondItem = " ";
+        if (elem.getTotal() == 10)
+        {
+            secondItem = "/"; // spare!
+        }
+        else if (elem.second == 0)
+        {
+            secondItem = "-";
+        }
+        else if (elem.second > 0  && elem.second < 10)
+        {
+             secondItem = QString::number(elem.second);
+        } // default case is " " via the initialization
+
+
+        // the total value for that frame (together with the added ones because of strike or spare)
+        //! @todo! is just a placeholder!
+        int const total = elem.getTotal();
+        QString thirdItem = (total >0 && total < 10) ? QString::number(total) : " "; //placeholder
 
         // pack all together
         auto tuple = std::make_tuple(firstItem, secondItem, thirdItem);

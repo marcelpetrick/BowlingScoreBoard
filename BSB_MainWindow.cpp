@@ -69,7 +69,7 @@ void BSB_MainWindow::slotUpdateBoard(QVector<std::tuple<QString, QString, QStrin
         text.append(std::get<0>(elem));
         text.append("  ");
         text.append(std::get<1>(elem));
-        text.append("\n");
+        text.append("\n--\n");
         text.append(std::get<2>(elem));
 
         // assign to the corresponding label

@@ -1,18 +1,16 @@
 # BowlingScoreBoard
 
 # How to build?
+Build via qmake (pro file) or cmake (CMakeLists.txt; tested under Linux, CMake 3.2, GCC 4.9 and Qt 5.10).
+Builds and runs with: Linux, Qt 5.10 and QtCreator 4.7-rc1, GCC 4.9
+Builds and runs with: Windows 7, Qt 5.11 and QtCreator 4.7; compiler from Visual Studio 2017 Community Edition
 
 # How to use?
-Build via qmake (pro file) or cmake (CMakeLists.txt; tested under Linux, CMake 3.2, GCC 4.9 and Qt 5.10).
 Run the binary. It will bind automatically via UDP to localhost:6543.
-Send messages via UDP (hint: use Packet Sender oder sendip) to the BowlingScoreBoard. This simulates the external character of the pin-counting-machine.
-
-This is version 0.1.
-Builds and runs with: Linux, Gcc, Qt 5.10 and QtCreator 4.7-rc1
-Builds and runs with: Windows 7, Qt 5.5 and QtCreator 4.6
+Send messages via UDP (hint: use the open-source program "Packet Sender" oder sendip) to the BowlingScoreBoard.
+This simulates the external character of the pin-counting-machine.
 
 # Assumptions
-
 Accepts messages for controlling the BowlingScoreBoard via UDP: hard-coded to localhost:6543 (see BSB_UdpListener.h)
 
 - new game can be started via "game:reset"
