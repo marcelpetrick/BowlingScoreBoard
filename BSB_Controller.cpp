@@ -14,6 +14,9 @@
 // own includes
 #include "BSB_Controller.h"
 
+//Qt includes
+#include <QtCore/QDebug>
+
 //----------------------------------------------------------------------------------
 
 BSB_Controller::BSB_Controller()
@@ -36,10 +39,8 @@ void BSB_Controller::slotIncomingMessage(const QString& message)
     if(message.startsWith(c_game))
     {
         QString const suffix = message.right(message.size() - c_game.size());
-        qDebug() << "game rest is:" << suffix;
         if(suffix == "reset")
         {
-            qDebug() << "resetGame!!!";
             m_gameData->resetGame();
         }
     }
@@ -72,14 +73,18 @@ void BSB_Controller::slotIncomingMessage(const QString& message)
             // also: check range
             if(value >= 0 && value <= 10)
             {
-                m_gameData->insertThrow(static_cast<size_t>(value));
+                bool const success = m_gameData->insertThrow(static_cast<size_t>(value));
+                if(!success)
+                {
+                    qDebug() << "ERROR: throw was not accepted!";
+                }
             }
         }
     }
 
     // update the situation of the gaming-board.
     // Is called now each time a message (valid or invalid); but this can be
-    // moved into the previous inner if-cases
+    // moved into the previous inner if-cases.
     auto const currentSituation = m_gameData->getCurrentSituation();
     emit signalCurrentSituation(currentSituation);
 }

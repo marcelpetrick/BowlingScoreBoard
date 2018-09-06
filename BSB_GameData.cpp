@@ -15,7 +15,7 @@
 // own includes
 #include "BSB_GameData.h"
 
-//#include <QtCore/QDebug>
+#include <QDebug> // todom remove
 
 //----------------------------------------------------------------------------------
 
@@ -44,14 +44,41 @@ const QString BSB_GameData::getName()
 bool BSB_GameData::insertThrow(size_t pins)
 {
     bool returnValue = false;
+    qDebug() << __LINE__;
 
-    //! @todo write the function to insert the value - handle it more correct!
-    m_frameData[m_currentField++].first = static_cast<int>(pins);
+    // prevent invalid access
+    if(0 <= m_currentField && m_currentField < 10)
+    {
+        qDebug() << __LINE__;
+        bool advanceFrame = false;
 
-    //
+        if(m_frameData[m_currentField].first == -1)
+        {
+            qDebug() << __LINE__;
+            m_frameData[m_currentField].first = static_cast<int>(pins);
+            returnValue = true;
+        }
+        else
+        {
+            qDebug() << __LINE__;
+            if(m_frameData[m_currentField].second == -1)
+            {
+                qDebug() << __LINE__;
+                //todo maybe check if the sum would be more than ten pins for the frame
+                m_frameData[m_currentField].second = static_cast<int>(pins);
+                advanceFrame = true; // because it is "full"
+                returnValue = true;
+            }
+        }
 
-    //! @attention Also check if more "inserts" are possible! Like: already ten frames done!
-
+        if(advanceFrame || m_frameData[m_currentField].getTotal() == 10)
+        {
+            // increase the next insertion
+            m_currentField++;
+            qDebug() << __LINE__;
+        }
+    }
+    qDebug() << __LINE__;
     return returnValue;
 }
 
@@ -60,7 +87,7 @@ bool BSB_GameData::insertThrow(size_t pins)
 void BSB_GameData::resetGame()
 {
     // reset whole game-data by iterating all frames
-    for(auto element : m_frameData)
+    for(auto & element : m_frameData)
     {
         element.reset();
     }
@@ -96,7 +123,7 @@ QVector<std::tuple<QString, QString, QString> > BSB_GameData::getCurrentSituatio
         }
         else if (elem.first > 0  && elem.first < 10)
         {
-             firstItem = QString::number(elem.first);
+            firstItem = QString::number(elem.first);
         } // default case is " " via the initialization
 
         // the second throw of a frame
@@ -111,12 +138,12 @@ QVector<std::tuple<QString, QString, QString> > BSB_GameData::getCurrentSituatio
         }
         else if (elem.second > 0  && elem.second < 10)
         {
-             secondItem = QString::number(elem.second);
+            secondItem = QString::number(elem.second);
         } // default case is " " via the initialization
 
 
         // the total value for that frame (together with the added ones because of strike or spare)
-        //! @todo! is just a placeholder!
+        //! @todo! is just a placeholder! fix this!
         int const total = elem.getTotal();
         QString thirdItem = (total >0 && total < 10) ? QString::number(total) : " "; //placeholder
 
