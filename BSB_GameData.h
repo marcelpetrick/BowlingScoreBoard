@@ -73,6 +73,10 @@ public:
     QVector<std::tuple<QString, QString, QString> > getCurrentSituation();
 
 private:
+    //! Compute the frame-totals according to the rules.
+    //! Done after each throw-insertion. Result is stored in a member.
+    void computerFrameTotalsAccordingToTheRules();
+
     //! contains the player-name
     QString m_playerName;
 
@@ -86,5 +90,5 @@ private:
     // keeps track of the current game-state.
     // Is updated after each inserted throw.
     enum { c_maxFrames = 10 };
-    int frameTotalsAccordingToRules[c_maxFrames];
+    int m_frameTotalsAccordingToRules[c_maxFrames];
 };

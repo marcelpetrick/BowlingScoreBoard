@@ -22,7 +22,13 @@
 BSB_GameData::BSB_GameData()
 {
     //! Resize the container with ten frames.
-    m_frameData.resize(10);
+    m_frameData.resize(c_maxFrames);
+
+    // init the array
+    for(int i = 0; i < c_maxFrames; i++)
+    {
+        m_frameTotalsAccordingToRules[i] = 0;
+    }
 }
 
 //----------------------------------------------------------------------------------
@@ -92,41 +98,12 @@ bool BSB_GameData::insertThrow(size_t pins)
     if(returnValue)
     {
         qDebug() << "evaluate:";
-        for(int frameToCompute = 0; frameToCompute < c_maxFrames; frameToCompute++)
-        {
-            int frameTotal = m_frameData[frameToCompute].getTotal();
-            // if it was spare or strike: add the next roll
-            if(frameTotal == 10)
-            {
-                qDebug() << "spare or strike: get next frame";
-                int const nextFrame = frameToCompute + 1;
-                if(nextFrame < c_maxFrames)
-                {
-                    // the value for the first ball
-                    frameTotal += m_frameData[nextFrame].first;
+        computerFrameTotalsAccordingToTheRules();
+    }
 
-                    // the value for the second ball, in case of strike
-                    if(m_frameData[frameToCompute].first == 10)
-                    {
-                        qDebug() << "strike: get next frame";
-                        if(m_frameData[nextFrame].first == 10)
-                        {
-                            // next-next frame
-                            int const nextNextFrame = nextFrame + 1;
-                            if(nextNextFrame < c_maxFrames)
-                            {
-                                // the value for the first ball
-                                frameTotal += m_frameData[nextNextFrame].first;
-                            }
-                        }
-                        else
-                        {
-                            frameTotal += m_frameData[nextFrame].second;
-                        }
-                    }
-                }
-            }
-        }
+    for(int i = 0; i < c_maxFrames; i++)
+    {
+       qDebug() <<  m_frameTotalsAccordingToRules[i] << ";";
     }
 
     return returnValue;
@@ -143,6 +120,12 @@ void BSB_GameData::resetGame()
     }
 
     m_currentField = 0;
+
+    // init the array
+    for(int i = 0; i < c_maxFrames; i++)
+    {
+        m_frameTotalsAccordingToRules[i] = 0;
+    }
 }
 
 //----------------------------------------------------------------------------------
@@ -159,6 +142,7 @@ QVector<std::tuple<QString, QString, QString> > BSB_GameData::getCurrentSituatio
 
     QVector<std::tuple<QString, QString, QString> > returnValue;
 
+    int currentPosition = 0;
     for(auto & elem : m_frameData)
     {
         // the first throw of a frame
@@ -186,24 +170,73 @@ QVector<std::tuple<QString, QString, QString> > BSB_GameData::getCurrentSituatio
         {
             secondItem = "-";
         }
-        else if (elem.second > 0  && elem.second < 10)
+        else if (elem.second > 0 && elem.second < 10)
         {
             secondItem = QString::number(elem.second);
         } // default case is " " via the initialization
 
-
         // the total value for that frame (together with the added ones because of strike or spare)
         //! @todo! is just a placeholder! fix this!
-        int const total = elem.getTotal();
-        QString thirdItem = (total > 0 && total <= 10) ? QString::number(total) : " ";
+        int const total = m_frameTotalsAccordingToRules[currentPosition];
+        // prevent to show the -1; also just for items which exist
+        QString thirdItem = (total > 0 && currentPosition < m_currentField) ? QString::number(total) : " ";
 
         // pack all together
         auto tuple = std::make_tuple(firstItem, secondItem, thirdItem);
 
         returnValue.append(tuple);
+        currentPosition++;
     }
 
     return returnValue;
+}
+
+//----------------------------------------------------------------------------------
+
+void BSB_GameData::computerFrameTotalsAccordingToTheRules()
+{
+    int previousFrameTotal = 0;
+
+    for(int frameToCompute = 0; frameToCompute < c_maxFrames; frameToCompute++)
+    {
+        int frameTotal = m_frameData[frameToCompute].getTotal();
+        // if it was spare or strike: add the next roll
+        if(frameTotal == 10)
+        {
+            qDebug() << "spare or strike: get next frame";
+            int const nextFrame = frameToCompute + 1;
+            if(nextFrame < c_maxFrames)
+            {
+                // the value for the first ball
+                frameTotal += std::max(0, m_frameData[nextFrame].first); // prevent adding the -1 from the init-state
+
+                // the value for the second ball, in case of strike
+                if(m_frameData[frameToCompute].first == 10)
+                {
+                    qDebug() << "strike: get next frame";
+                    if(m_frameData[nextFrame].first == 10)
+                    {
+                        // next-next frame
+                        int const nextNextFrame = nextFrame + 1;
+                        if(nextNextFrame < c_maxFrames)
+                        {
+                            // the value for the first ball
+                            frameTotal += std::max(0, m_frameData[nextNextFrame].first); // prevent adding the -1 from the init-state
+                        }
+                    }
+                    else
+                    {
+                        frameTotal += std::max(0, m_frameData[nextFrame].second); // prevent adding the -1 from the init-state
+                    }
+                }
+            }
+        }
+
+        // assign to the current one
+        m_frameTotalsAccordingToRules[frameToCompute] = frameTotal + previousFrameTotal;
+        // store the current value for the next element
+        previousFrameTotal = m_frameTotalsAccordingToRules[frameToCompute];
+    }
 }
 
 //----------------------------------------------------------------------------------
