@@ -25,9 +25,9 @@ BSB_GameData::BSB_GameData()
     m_frameData.resize(c_maxFrames);
 
     // init the array
-    for(int i = 0; i < c_maxFrames; i++)
+    for(int & m_frameTotalsAccordingToRule : m_frameTotalsAccordingToRules)
     {
-        m_frameTotalsAccordingToRules[i] = 0;
+        m_frameTotalsAccordingToRule = 0;
     }
 }
 
