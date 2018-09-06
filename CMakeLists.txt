@@ -28,11 +28,12 @@ set(BowlingScoreBoard_SOURCES
 	BSB_MainWindow.h
 	BSB_MainWindow.cpp
 	BSB_MainWindow.ui
-	BSB_GameStepWidget.ui
 	BSB_UdpListener.h
 	BSB_UdpListener.cpp
 	BSB_Controller.h
 	BSB_Controller.cpp
+	BSB_GameData.h
+	BSB_GameData.cpp
 )
 
 # maybe add WIN32 before the source-var
@@ -40,4 +41,3 @@ add_executable(BowlingScoreBoard ${BowlingScoreBoard_SOURCES})
 target_link_libraries (BowlingScoreBoard Qt5::Widgets)
 target_link_libraries (BowlingScoreBoard Qt5::Core)
 target_link_libraries (BowlingScoreBoard Qt5::Network)
-
