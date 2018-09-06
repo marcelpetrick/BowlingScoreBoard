@@ -154,7 +154,7 @@ void BSB_MainWindow::printStatus(const QString& message)
 void BSB_MainWindow::setupGameBoard()
 {
     // add a style via QSS
-    setStyleSheet("QLabel{ background-color : rgba( 128, 128, 128, 255); border-radius : 4px; border: 1px solid black }");
+    setStyleSheet("QLabel{ background-color : rgba( 128, 128, 128, 255); border-radius : 4px; border: 1px solid black; padding: 2px 2px 2px 2px }");
 
     QHBoxLayout* newLayout = new QHBoxLayout;
 
