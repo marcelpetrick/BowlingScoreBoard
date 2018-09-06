@@ -54,11 +54,11 @@ BSB_MainWindow::~BSB_MainWindow()
 void BSB_MainWindow::slotUpdateBoard(QVector<std::tuple<QString, QString, QString> > state)
 {
     // print current state to stdout until the ui works
-    for(auto const& elem : state)
-    {
-        // print them straightforward ..
-        qDebug() << std::get<0>(elem) << "," << std::get<1>(elem) << "," << std::get<2>(elem); //todom remove
-    }
+//    for(auto const& elem : state)
+//    {
+//        // print them straightforward ..
+//        qDebug() << std::get<0>(elem) << "," << std::get<1>(elem) << "," << std::get<2>(elem); //todom remove
+//    }
 
     // forward the data to the ui
     int counter = 0;
@@ -73,7 +73,6 @@ void BSB_MainWindow::slotUpdateBoard(QVector<std::tuple<QString, QString, QStrin
         text.append(std::get<2>(elem));
 
         // assign to the corresponding label
-        qDebug() << "text:" << text; //todom remove
         m_labelFrame[counter]->setText(text);
         // prepare for next frame
         counter++;

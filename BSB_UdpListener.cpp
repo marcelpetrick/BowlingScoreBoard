@@ -11,7 +11,11 @@
 //! @brief  Listens for incoming udp-packets and forwards them via signal.
 //!----------------------------------------------------------------------------------
 
+// own includes
 #include "BSB_UdpListener.h"
+
+//Qt includes
+#include <QtCore/QDebug>
 
 //----------------------------------------------------------------------------------
 

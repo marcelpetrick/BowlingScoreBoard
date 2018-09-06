@@ -15,8 +15,6 @@
 // own includes
 #include "BSB_GameData.h"
 
-#include <QDebug> // todom remove
-
 //----------------------------------------------------------------------------------
 
 BSB_GameData::BSB_GameData()
@@ -50,17 +48,14 @@ const QString BSB_GameData::getName()
 bool BSB_GameData::insertThrow(size_t pins)
 {
     bool returnValue = false;
-    qDebug() << __LINE__;
 
     // prevent invalid access
     if(0 <= m_currentField && m_currentField < 10)
     {
-        qDebug() << __LINE__;
         bool advanceFrame = false;
 
         if(m_frameData[m_currentField].first == -1)
         {
-            qDebug() << __LINE__;
             m_frameData[m_currentField].first = static_cast<int>(pins);
 
             // if it was a strike: advance immediately
@@ -74,11 +69,8 @@ bool BSB_GameData::insertThrow(size_t pins)
         }
         else
         {
-            qDebug() << __LINE__;
             if(m_frameData[m_currentField].second == -1)
             {
-                qDebug() << __LINE__;
-                //todo maybe check if the sum would be more than ten pins for the frame
                 m_frameData[m_currentField].second = static_cast<int>(pins);
                 advanceFrame = true; // because it is "full"
                 returnValue = true;
@@ -89,21 +81,13 @@ bool BSB_GameData::insertThrow(size_t pins)
         {
             // increase the next insertion
             m_currentField++;
-            qDebug() << __LINE__;
         }
     }
-    qDebug() << __LINE__;
 
     // if something has changed (== successful insertion), re-evaluate the board
     if(returnValue)
     {
-        qDebug() << "evaluate:";
         computerFrameTotalsAccordingToTheRules();
-    }
-
-    for(int i = 0; i < c_maxFrames; i++)
-    {
-       qDebug() <<  m_frameTotalsAccordingToRules[i] << ";";
     }
 
     return returnValue;
@@ -203,7 +187,7 @@ void BSB_GameData::computerFrameTotalsAccordingToTheRules()
         // if it was spare or strike: add the next roll
         if(frameTotal == 10)
         {
-            qDebug() << "spare or strike: get next frame";
+            // spare or strike: get next frame
             int const nextFrame = frameToCompute + 1;
             if(nextFrame < c_maxFrames)
             {
@@ -213,7 +197,7 @@ void BSB_GameData::computerFrameTotalsAccordingToTheRules()
                 // the value for the second ball, in case of strike
                 if(m_frameData[frameToCompute].first == 10)
                 {
-                    qDebug() << "strike: get next frame";
+                    // strike: get next frame
                     if(m_frameData[nextFrame].first == 10)
                     {
                         // next-next frame

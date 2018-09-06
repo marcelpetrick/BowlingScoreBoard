@@ -1,5 +1,7 @@
 # BowlingScoreBoard
 
+author: mail@marcelpetrick.it
+
 # How to build?
 Build via qmake (pro file) or cmake (CMakeLists.txt; tested under Linux, CMake 3.2, GCC 4.9 and Qt 5.10).
 Builds and runs with: Linux, Qt 5.10 and QtCreator 4.7-rc1, GCC 4.9
@@ -24,6 +26,5 @@ Messages are accepted, but not processed in a way that the state of the game-boa
 Player has to reset actively the game (see above).
 
 # Potential improvements
-
 Use definitely QTest to unit-test the BSB_GameData (which handles the throw-insertion and the calculates the score).
 Fix the "bonus throws" in the last frame. Perfect game with a score of 300 is currently not possible.
