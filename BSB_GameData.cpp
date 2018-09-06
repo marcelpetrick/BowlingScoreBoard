@@ -56,6 +56,14 @@ bool BSB_GameData::insertThrow(size_t pins)
         {
             qDebug() << __LINE__;
             m_frameData[m_currentField].first = static_cast<int>(pins);
+
+            // if it was a strike: advance immediately
+            if(m_frameData[m_currentField].first == 10)
+            {
+                m_frameData[m_currentField].second = 0;
+                advanceFrame = true; // because it is "full"
+            }
+
             returnValue = true;
         }
         else
@@ -79,6 +87,48 @@ bool BSB_GameData::insertThrow(size_t pins)
         }
     }
     qDebug() << __LINE__;
+
+    // if something has changed (== successful insertion), re-evaluate the board
+    if(returnValue)
+    {
+        qDebug() << "evaluate:";
+        for(int frameToCompute = 0; frameToCompute < c_maxFrames; frameToCompute++)
+        {
+            int frameTotal = m_frameData[frameToCompute].getTotal();
+            // if it was spare or strike: add the next roll
+            if(frameTotal == 10)
+            {
+                qDebug() << "spare or strike: get next frame";
+                int const nextFrame = frameToCompute + 1;
+                if(nextFrame < c_maxFrames)
+                {
+                    // the value for the first ball
+                    frameTotal += m_frameData[nextFrame].first;
+
+                    // the value for the second ball, in case of strike
+                    if(m_frameData[frameToCompute].first == 10)
+                    {
+                        qDebug() << "strike: get next frame";
+                        if(m_frameData[nextFrame].first == 10)
+                        {
+                            // next-next frame
+                            int const nextNextFrame = nextFrame + 1;
+                            if(nextNextFrame < c_maxFrames)
+                            {
+                                // the value for the first ball
+                                frameTotal += m_frameData[nextNextFrame].first;
+                            }
+                        }
+                        else
+                        {
+                            frameTotal += m_frameData[nextFrame].second;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     return returnValue;
 }
 
@@ -130,7 +180,7 @@ QVector<std::tuple<QString, QString, QString> > BSB_GameData::getCurrentSituatio
         QString secondItem = " ";
         if (elem.getTotal() == 10)
         {
-            secondItem = "/"; // spare!
+            secondItem = elem.first != 10 ? "/" : " "; // spare!
         }
         else if (elem.second == 0)
         {
@@ -145,7 +195,7 @@ QVector<std::tuple<QString, QString, QString> > BSB_GameData::getCurrentSituatio
         // the total value for that frame (together with the added ones because of strike or spare)
         //! @todo! is just a placeholder! fix this!
         int const total = elem.getTotal();
-        QString thirdItem = (total >0 && total < 10) ? QString::number(total) : " "; //placeholder
+        QString thirdItem = (total > 0 && total <= 10) ? QString::number(total) : " ";
 
         // pack all together
         auto tuple = std::make_tuple(firstItem, secondItem, thirdItem);

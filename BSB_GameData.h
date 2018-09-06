@@ -82,4 +82,9 @@ private:
     //! States which frame is the current one. Will progress in case a frame is "full".
     //! Means: two throws or one strike.
     int m_currentField = 0; //! note: int and not size_t, because QVector relies on int. Else compiler warns: C4267.
+
+    // keeps track of the current game-state.
+    // Is updated after each inserted throw.
+    enum { c_maxFrames = 10 };
+    int frameTotalsAccordingToRules[c_maxFrames];
 };
