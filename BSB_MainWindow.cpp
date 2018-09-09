@@ -105,7 +105,7 @@ void BSB_MainWindow::createActions()
     m_aboutQtAction->setShortcut(Qt::CTRL + Qt::Key_Q);
     connect(m_aboutQtAction, &QAction::triggered, qApp, &QApplication::aboutQt);
     // replaced the slot-call with a lambda :)
-    connect(m_aboutQtAction, &QAction::triggered, this, [=] () { printStatus(tr("Invoked <b>Help|About Qt</b>")); });
+    connect(m_aboutQtAction, &QAction::triggered, this, [=] () { printStatus(tr("Invoked Help|About Qt")); });
 }
 
 //----------------------------------------------------------------------------------
