@@ -19,7 +19,7 @@
 
 BSB_GameData::BSB_GameData()
 {
-    //! Resize the container with ten frames.
+    // resize the container with ten frames.
     m_frameData.resize(c_maxFrames);
 
     // init the array
@@ -105,10 +105,10 @@ void BSB_GameData::resetGame()
 
     m_currentField = 0;
 
-    // init the array
-    for(int i = 0; i < c_maxFrames; i++)
+    // re-initialize the array
+    for(int & m_frameTotalsAccordingToRule : m_frameTotalsAccordingToRules)
     {
-        m_frameTotalsAccordingToRules[i] = 0;
+        m_frameTotalsAccordingToRule = 0;
     }
 }
 
