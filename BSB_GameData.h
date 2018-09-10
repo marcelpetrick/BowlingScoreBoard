@@ -36,13 +36,14 @@ public:
     void reset() { first = -1; second = -1; third = -1; hasThird = false; }
 
     //! Returns the value for the current frame.
-    int getTotal() const { return (first >= 0 ? first : 0) + (second >= 0 ? second : 0) + (third >= 0 ? third : 0); } // since all are initialized with -1; just sum the positive values up
+	//! Since all are initialized with -1; just sum the positive values up.
+    int getTotal() const { return (first >= 0 ? first : 0) + (second >= 0 ? second : 0) + (third >= 0 ? third : 0); }
 
     //! values for the first, second and (if possible) third throw
     int first = -1;
     int second = -1;
     int third = -1;
-    bool hasThird = false; // in case of the last frame, allow three throws if the former ones are Strike/Spare
+    bool hasThird = false; // in case of the last frame, allow three throws if the first ones are Strike/Spare.
 
     //! @todo add member checks if "wasStrike" or "wasSpare"
 };
@@ -87,7 +88,7 @@ private:
     //! Means: two throws or one strike.
     int m_currentField = 0; //! note: int and not size_t, because QVector relies on int. Else compiler warns: C4267.
 
-    // keeps track of the current game-state.
+    // Keeps track of the current game-state.
     // Is updated after each inserted throw.
     enum { c_maxFrames = 10 };
     int m_frameTotalsAccordingToRules[c_maxFrames];

@@ -19,7 +19,7 @@
 
 //----------------------------------------------------------------------------------
 
-BSB_UdpListener::BSB_UdpListener(const QString receiverInterface, const quint16 receiverPort, QObject *parent)
+BSB_UdpListener::BSB_UdpListener(QString const& receiverInterface, const quint16 receiverPort, QObject *parent)
     : QObject (parent)
 {
     m_udpSocket = std::unique_ptr<QUdpSocket>(new QUdpSocket(this));

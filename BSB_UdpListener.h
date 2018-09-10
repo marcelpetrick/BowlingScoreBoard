@@ -22,7 +22,7 @@
 
 //----------------------------------------------------------------------------------
 
-// constants for the udp-socket. Potential improvement: be moved to some dynamic config-file.
+// Constants for the udp-socket. Potential improvement: be moved to some dynamic config-file.
 namespace {
     QString const c_interface = "localhost";
     quint16 const c_port = 6543;
@@ -35,7 +35,7 @@ class BSB_UdpListener : public QObject
     Q_OBJECT
 
 public:
-    explicit BSB_UdpListener(QString const receiverInterface, quint16 const receiverPort, QObject* parent = nullptr);
+	explicit BSB_UdpListener(QString const& receiverInterface, quint16 const receiverPort, QObject* parent = nullptr);
 
 signals:
     //! Used to forward the data from incoming packets to the controller. No filtering is applied!

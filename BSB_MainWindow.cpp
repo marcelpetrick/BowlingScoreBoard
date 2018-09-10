@@ -81,7 +81,7 @@ void BSB_MainWindow::slotUpdateBoard(QVector<std::tuple<QString, QString, QStrin
 
 //----------------------------------------------------------------------------------
 
-void BSB_MainWindow::slotUpdateName(const QString name)
+void BSB_MainWindow::slotUpdateName(QString const& name)
 {
     if(m_labelPlayerName)
     {

@@ -51,14 +51,14 @@ public slots: // check if can be private
     void slotUpdateBoard(QVector<std::tuple<QString, QString, QString> > state);
 
     //! Change the name inside the ui.
-    void slotUpdateName(QString const name);
+	void slotUpdateName(QString const& name);
 
 private slots:
     //! Slot for the help-menu-entries
     void slotAboutBsb();
 
 private:
-    //! create actions and fitting menues for the "help-menu"
+    //! create actions and fitting menus for the "help-menu"
     void createActions();
     void createMenus();
 
@@ -81,7 +81,7 @@ private:
 
     //! members which allow easier access to the labels for the
     //! player's name and the frames
-    QLabel* m_labelPlayerName = nullptr; // does not need explicite memory-handling, because will be a child of "this" (parent)
+    QLabel* m_labelPlayerName = nullptr; // does not need explicit memory-handling, because will be a child of "this" (parent)
     QVector<QLabel*> m_labelFrame;
 };
 
