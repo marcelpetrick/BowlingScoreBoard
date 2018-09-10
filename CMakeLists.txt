@@ -3,8 +3,9 @@
 # author: mail@marcelpetrick.it
 #-----------------------------------------------------------------
 
-# maybe set to 3.10.0; 3.8 is because of C++11
-#cmake_minimum_required(VERSION 3.8.0)
+# 3.8 is required because of C++11
+cmake_minimum_required(VERSION 3.10)
+
 project(BowlingScoreBoard)
 
 find_package(Qt5Widgets CONFIG REQUIRED)
