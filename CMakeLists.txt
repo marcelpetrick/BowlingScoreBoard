@@ -6,6 +6,7 @@
 # 3.8 is required because of C++11
 cmake_minimum_required(VERSION 3.10)
 
+# define the project name
 project(BowlingScoreBoard)
 
 find_package(Qt5Widgets CONFIG REQUIRED)
@@ -23,7 +24,11 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# put all sources into one variable
+# enforce (testwise x86 32 bit version)
+#set(CMAKE_C_FLAGS -m32)
+#set(CMAKE_CXX_FLAGS -m32)
+
+# put all sources into one variable: no distinction between h, cpp and ui (or qrc)
 set(BowlingScoreBoard_SOURCES
 	main.cpp
 	BSB_MainWindow.h
@@ -37,7 +42,7 @@ set(BowlingScoreBoard_SOURCES
 	BSB_GameData.cpp
 )
 
-# maybe add WIN32 before the source-var
+# create the final result
 add_executable(BowlingScoreBoard ${BowlingScoreBoard_SOURCES})
 target_link_libraries (BowlingScoreBoard Qt5::Widgets)
 target_link_libraries (BowlingScoreBoard Qt5::Core)
