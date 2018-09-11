@@ -75,12 +75,29 @@ bool BSB_GameData::insertThrow(size_t pins)
                 advanceFrame = true; // because it is "full"
                 returnValue = true;
             }
+            else
+            {
+                //looks like the last (tenth) frame
+                if(m_frameData[m_currentField].third == -1 && m_currentField == 9)
+                {
+                    //qDebug() << "last frame! :)";
+                    m_frameData[m_currentField].third = static_cast<int>(pins);
+                }
+            }
         }
 
         if(advanceFrame || m_frameData[m_currentField].getTotal() == 10)
         {
-            // increase the next insertion
-            m_currentField++;
+            // increase for correct following insertion, but just do if not the last frame
+            if(m_currentField < c_maxFrames-1)
+            {
+                m_currentField++;
+            }
+            else
+            {
+                // last frame! :)
+                int const a = 1+1; // just for debugging
+            }
         }
     }
 
@@ -114,7 +131,6 @@ void BSB_GameData::resetGame()
 
 //----------------------------------------------------------------------------------
 
-//! todo evaluate if maybe QChar is better suited, because all entries are just one character wide
 QVector<std::tuple<QString, QString, QString> > BSB_GameData::getCurrentSituation()
 {
     //! Plan is to return a vector of a triple (first throw, second throw, current frame).
@@ -160,7 +176,6 @@ QVector<std::tuple<QString, QString, QString> > BSB_GameData::getCurrentSituatio
         } // default case is " " via the initialization
 
         // the total value for that frame (together with the added ones because of strike or spare)
-        //! @todo! is just a placeholder! fix this!
         int const total = m_frameTotalsAccordingToRules[currentPosition];
         // prevent to show the -1; also just for items which exist
         QString thirdItem = (total > 0 && currentPosition < m_currentField) ? QString::number(total) : " ";
