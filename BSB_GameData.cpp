@@ -15,6 +15,8 @@
 // own includes
 #include "BSB_GameData.h"
 
+#include <QtCore/QtDebug> // just for debugging
+
 //----------------------------------------------------------------------------------
 
 BSB_GameData::BSB_GameData()
@@ -49,7 +51,7 @@ bool BSB_GameData::insertThrow(size_t pins)
 {
     bool returnValue = false;
 
-    // prevent invalid access
+    // prevent invalid access: just allow inside the range
     if(0 <= m_currentField && m_currentField < 10)
     {
         bool advanceFrame = false;
@@ -61,43 +63,58 @@ bool BSB_GameData::insertThrow(size_t pins)
             // if it was a strike: advance immediately
             if(m_frameData[m_currentField].first == 10)
             {
-                m_frameData[m_currentField].second = 0;
-                advanceFrame = true; // because it is "full"
+                if(m_currentField != c_maxFrames-1)
+                {
+                    m_frameData[m_currentField].second = 0;
+                    advanceFrame = true; // because it is "full"
+                    returnValue = true; // function worked well
+                }
+                else
+                {
+                    qDebug() << "last frame: don't advance; inserted at first - next shall be second!"; //todom remove
+                }
             }
-
-            returnValue = true;
         }
         else
         {
             if(m_frameData[m_currentField].second == -1)
             {
-                m_frameData[m_currentField].second = static_cast<int>(pins);
-                advanceFrame = true; // because it is "full"
-                returnValue = true;
+                if(m_currentField != c_maxFrames-1)
+                {
+                    m_frameData[m_currentField].second = static_cast<int>(pins);
+                    advanceFrame = true; // because it is "full"
+                    returnValue = true; // function worked well
+                }
+                else
+                {
+                    qDebug() << "last frame: don't advance; inserted at second - next shall be third!"; //todom remove
+                }
             }
             else
             {
                 //looks like the last (tenth) frame
-                if(m_frameData[m_currentField].third == -1 && m_currentField == 9)
+                if(m_frameData[m_currentField].third == -1)
                 {
-                    //qDebug() << "last frame! :)";
-                    m_frameData[m_currentField].third = static_cast<int>(pins);
+                    if(m_currentField == c_maxFrames-1)
+                    {
+                        qDebug() << "last frame! insert at third!"; // todom remove
+                        m_frameData[m_currentField].third = static_cast<int>(pins);
+                        returnValue = true; // function worked well
+                    }
+                    {
+                        qDebug() << "got to third, but not correct frame: ERROR!"; //todom remove
+                    }
                 }
             }
         }
 
-        if(advanceFrame || m_frameData[m_currentField].getTotal() == 10)
+        // either explicitely or because all pins have fallen
+        bool const allPinsDownButNotLastFrame = (m_frameData[m_currentField].getTotal() == 10 && m_currentField != c_maxFrames-1);
+        qDebug() << "allPinsDownButNotLastFrame:" << (allPinsDownButNotLastFrame ? "TRUE":"FALSE") << "and frame:" << m_currentField; //todom remove
+        if(advanceFrame || allPinsDownButNotLastFrame)
         {
-            // increase for correct following insertion, but just do if not the last frame
-            if(m_currentField < c_maxFrames-1)
-            {
-                m_currentField++;
-            }
-            else
-            {
-                // last frame! :)
-                int const a = 1+1; // just for debugging
-            }
+            // increase the index for the next insertion
+            m_currentField++;
         }
     }
 
@@ -173,6 +190,14 @@ QVector<std::tuple<QString, QString, QString> > BSB_GameData::getCurrentSituatio
         else if (elem.second > 0 && elem.second < 10)
         {
             secondItem = QString::number(elem.second);
+        }
+        else if(elem.getTotal() > 10)
+        {
+            //last frame handling: is strike after spare
+            if(elem.second == 10)
+            {
+                secondItem = "X"; // strike!
+            }
         } // default case is " " via the initialization
 
         // the total value for that frame (together with the added ones because of strike or spare)
@@ -181,7 +206,7 @@ QVector<std::tuple<QString, QString, QString> > BSB_GameData::getCurrentSituatio
         QString thirdItem = (total > 0 && currentPosition < m_currentField) ? QString::number(total) : " ";
 
         // pack all together
-        auto tuple = std::make_tuple(firstItem, secondItem, thirdItem);
+        auto const tuple = std::make_tuple(firstItem, secondItem, thirdItem);
 
         returnValue.append(tuple);
         currentPosition++;
