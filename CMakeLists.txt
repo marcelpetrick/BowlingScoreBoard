@@ -3,8 +3,9 @@
 # author: mail@marcelpetrick.it
 #-----------------------------------------------------------------
 
-# 3.8 is required because of C++11
-cmake_minimum_required(VERSION 3.10)
+# 3.8 is required because of C++11 - but somehow this
+# still works (and 3.2 is the version I have installed on GNU Linux..)
+cmake_minimum_required(VERSION 3.2)
 
 # define the project name
 project(BowlingScoreBoard)
@@ -47,3 +48,4 @@ add_executable(BowlingScoreBoard ${BowlingScoreBoard_SOURCES})
 target_link_libraries (BowlingScoreBoard Qt5::Widgets)
 target_link_libraries (BowlingScoreBoard Qt5::Core)
 target_link_libraries (BowlingScoreBoard Qt5::Network)
+
