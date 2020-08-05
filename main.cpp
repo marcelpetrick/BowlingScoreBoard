@@ -4,7 +4,7 @@
 //! @author mail@marcelpetrick.it
 //! @date   20180905
 //!
-//! Coding challenge with C++/Qt/Cmake.
+//! Coding challenge with C++/Qt/CMake.
 //! Create a score-board which computes the score and displays it to the player.
 //!
 //! @class  BSB_MainWindow
@@ -19,7 +19,7 @@
 
 //----------------------------------------------------------------------------------
 
-int main(int argc, char *argv[])
+int main(int argc, char* argv[])
 {
     QApplication a(argc, argv);
 

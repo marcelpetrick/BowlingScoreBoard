@@ -4,7 +4,7 @@
 //! @author mail@marcelpetrick.it
 //! @date   20180905
 //!
-//! Coding challenge with C++/Qt/Cmake.
+//! Coding challenge with C++/Qt/CMake.
 //! Create a score-board which computes the score and displays it to the player.
 //!
 //! @class  BSB_MainWindow
@@ -125,7 +125,7 @@ void BSB_MainWindow::slotAboutBsb()
     printStatus(tr("Invoked Help|About BowlingScoreBoard"));
 
     QMessageBox mBox(QMessageBox::Information, tr("About BowlingScoreBoard"),
-                     tr("Small coding-challenge in C++/Qt/Cmake. Works cross-platform.<br>"
+                     tr("Small coding-challenge in C++/Qt/CMake. Works cross-platform.<br>"
                         "<br>"
                         "Initially visible state is a \"new game\".<br>"
                         "The BowlingScoreBoard reacts to UDP-input on localhost:6543.<br>"

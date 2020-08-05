@@ -22,7 +22,7 @@ set(CMAKE_AUTOUIC ON)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 # C++11 support - else we run into issues with the non-static nullptr-assignment
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # enforce (testwise x86 32 bit version)
@@ -48,4 +48,3 @@ add_executable(BowlingScoreBoard ${BowlingScoreBoard_SOURCES})
 target_link_libraries (BowlingScoreBoard Qt5::Widgets)
 target_link_libraries (BowlingScoreBoard Qt5::Core)
 target_link_libraries (BowlingScoreBoard Qt5::Network)
-
