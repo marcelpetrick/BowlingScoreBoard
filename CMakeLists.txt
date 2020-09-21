@@ -25,6 +25,8 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+set(CMAKE_CXX_INCLUDE_WHAT_YOU_USE "C:\\include-what-you-use\\bin\\include-what-you-use.exe")
+
 # enforce (testwise x86 32 bit version)
 #set(CMAKE_C_FLAGS -m32)
 #set(CMAKE_CXX_FLAGS -m32)
